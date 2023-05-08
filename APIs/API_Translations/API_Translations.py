@@ -65,11 +65,14 @@ def load_translation(self):
 		for line in f:
 			split_line = line.split('\t')
 			if len(split_line) <= 1:
-				print('WARNING: translation file ' + translation_filename + ' - no tab character found on line: ' + line)
+				# 警告をコメントアウト
+				# print('WARNING: translation file ' + translation_filename + ' - no tab character found on line: ' + line)
 				continue
 			(english, translated) = split_line
+			if r"\n" in translated:
+				translated = translated.replace(r"\n", "\n")
 			translation[english] = translated[:-1]
-	
+
 	if font_filename != None:
 		font_path = os.path.join('mods','API_Universal','translations', self.options['translation'], font_filename)
 		translation_font = pygame.font.Font(font_path, 16)
@@ -85,16 +88,39 @@ def declare_untranslated_string(string):
 	pass
 
 import re
+
+num_p = re.compile(r"\[[0-9]+")
+d_p = re.compile(r"@")
+hiragana_p = re.compile(r"[\u3041-\u309F]+") # ひらがなの正規表現
+
 def translate(string):
+	string = repr(string)[1:-1]
+	print("String:"+string)
+	if num_p.search(string):
+		num_list = [m.group()[1:] for m in num_p.finditer(string)]
+		print("num_list:",end="")
+		print(num_list)
+		string = num_p.sub(r"[@", string)
+
 	if translation == None:
 		return string
 
 	if string in translation:
-		return translation[string]
-
+		if d_p.search(string):
+			string = translation[string]
+			for num in num_list:
+				string = d_p.sub(num, string, 1)
+			return string
+		else:
+			return translation[string]
+	return string
+"""
 	# attempt to translate word by word
-	exp = '[\[\]:|\w\|\'|%|-]+|.| |,'
+	#exp = '[\[\]:|\w\|\'|%|-]+|.| |,'
+	exp = '[\[\]:|\w\'%-]+|.| |,'
 	words = re.findall(exp, string)
+	print("wordsnum:" +str(len(words)))
+	print(words)
 	words.reverse()
 
 	translated_string = ''
@@ -140,9 +166,8 @@ def translate(string):
 		else:
 			translated_string += word
 			declare_untranslated_string(word)
-		
 	return string
-
+"""
 	
 
 

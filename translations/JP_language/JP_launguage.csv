@@ -10,18 +10,84 @@ Back to Title	タイトルへ戻る
 NORMAL GAME	ノーマルゲーム
 ARCHMAGE TRIALS	アークメイジトライアル
 WEEKLY RUN	ウィークリーラン
-Music Volume:	ＢＧＭ音量
-Menu (ESC)	メニュー(ESC)
+Music Volume:	BGM音量
+Menu (ESCAPE)	メニュー(ESCAPE)
 How to Play (H)	遊び方(H)
 Character Sheet (C)	キャラクターシート(C)
 Really abandon the current run?	本当にこの冒険を破棄する？
 Yes	はい
 No	いいえ
 (Defeat all enemies and destroy all gates to unlock)	(全ての敵を倒せばゲートが開かれる)
-Welcome to Rift Wizard.	ようこそRift wizardへ
-Press H for a full help screen and details on all the game's controls.	Hを押すことでヘルプがいつでも閲覧できます。
-Mouseover something for a detailed description of what it does.	大抵のものはマウスカーソルを合わせれば詳細が確認できます。
-Press S to purchase a spell.	SボタンでSpellを買う画面へすぐに飛べます。
+
+Base Game Settings:	ゲーム設定:
+  How to Play	  遊び方
+  Sound Volume:	  サウンドボリューム:
+  Music Volume:	  ミュージックボリューム:
+  Anim Speed:	  アニメーションスピード:
+  Rebind Controls	  キーコンフィグ
+  Language:	  言語:
+
+HOW TO PLAY	遊び方
+Finish 24 levels and kill Mordred to win the game.	24のレベルをクリアし、Mordredを倒せばゲームに勝利する。
+Destroy all enemies to finish a level.	すべての敵を撃破することでレベルクリアだ。
+
+After completing a level, walk onto a rift to peek inside.	レベルをクリアした後、裂け目の上を歩いて中を覗いてみよう。
+Teleport through the rift by clicking any empty tile, or abort the teleport using escape.  	空いているタイルをクリックして裂け目からテレポートするか、エスケープでテレポートを中止する。
+After you teleport into a level, you cannot leave until it is finished.  Teleport with care.	テレポートで入ったレベルは、そのレベルが終了するまで出ることができない。 テレポートは慎重に行なおう。
+
+Spells and passive skills can all purchased with skillpoints (SP) from the Character Sheet.	呪文とパッシブスキルは、すべてキャラクターシートからスキルポイント（SP）を使って購入することができる。
+Spells can be individually upgraded from the Character sheet using SP, and at shrines found in the world.	呪文は、キャラクターシートからSPを使って個別にアップグレードすることができ、ワールド内にある祠でもアップグレードすることができる。
+
+Spells have limited charges.  Casting a spell costs one charge from that spell.	スペルのチャージには制限がある。 呪文を唱えると、その呪文のチャージを1つ消費する。
+Regain charges by drinking mana potions, which can be found on the ground in some levels.	マナポーションを飲むとチャージが回復する。マナポーションは一部の階層で地面に落ちている。
+
+CONTROLS:
+
+H: Help (This Screen)      C: Character Sheet      S: Learn Spells     K: Learn Skills	H：ヘルプ（この画面） C：キャラクターシート S：呪文の習得 K：スキルの習得
+
+Left click: Move, or cast currently selected spell at the cursor's position.	左クリック: 移動、または現在選択されている呪文をカーソルの位置に唱える。
+Right click: Cancel current spell or exit current menu	右クリック: 現在の呪文を取り消すか、現在のメニューを終了する。
+
+Numpad:
+7 8 9
+4   6  -> Move one space in the corresponding direction.	4   6  -> 対応する方向に1スペース移動します。
+1 2 3
+
+Numpad 5: Wait one turn (Or continue channeling if channeling a spell)	テンキー5: 1ターン待つ（呪文をチャネリングしている場合は、チャネリングを継続する）
+
+        1 2 3 4 5 6 7 8 9 0: Cast/Select spell 1-10	        1 2 3 4 5 6 7 8 9 0: 呪文1～10を唱える／選択する
+Shift + 1 2 3 4 5 6 7 8 9 0: Cast/Select spell 11-20	Shift + 1 2 3 4 5 6 7 8 9 0: 呪文を唱える/選択する 11-20
+Alt   + 1 2 3 4 5 6 7 8 9 0: Use/Select item 1-10	Alt   + 1 2 3 4 5 6 7 8 9 0: 使用／項目1～10を選ぶ
+
+Numpad/mouse: move the targeting reticle.	テンキー/マウス: ターゲットレティクルを移動します。
+Esc: Cancel spell targeting	Esc: 呪文ターゲティングをキャンセルする。
+Enter: cast current spell or enter portal at current location	Enter: 現在の呪文を唱えたり、現在地のポータルに入ったりする。
+
+Advanced Controls:
+
+l: Show line of sight           t: Show threatened tiles	l: 視線を表示する           t: 脅威のタイルを表示する
+Tab:  Next target               m:   Show message log	Tab:  次のターゲット               m:   メッセージログを表示
+
+v: look (target a square to look, tab target to look at interesting places)	v: 見る（見るために四角をターゲットにする、面白い場所を見るためにタブターゲットをターゲットにする）
+w: walk (target a square to walk there, tab target to walk to interesting places)	w: 歩く（広場をターゲットにしてそこを歩く、タブターゲットで面白い場所を歩く）
+a: autopickup all loot (after clearing level)	a: 全ての戦利品を自動でピックアップ（レベルクリア後）
+Shift + up/down arrow on character sheet: change selected spell hotkey	Shift + 上下の矢印（キャラクターシート中）: 選択した呪文のホットキーを変更する
+i: interact with current tile (enter portal, open shop)	i: 現在のタイルと対話する（ポータルに入る、ショップを開く）
+pgup/pgdown: view descriptions of spell upgrades (when viewing spell description)	pgup/pgdown: スペルアップグレードの説明を見る（スペル説明閲覧中のみ）
+
+
+Stunned: Cannot act.	Stunned: 行動不能になる。
+Poisoned: Take 1 poison damage per turn and cannot heal.	Poisoned: 1ターンに1回、毒のダメージを受け、回復できない。
+Petrified: Cannot act, gain 100 ice and lightning resist, gain 75 physical and fire resist.	Petrified: 行動不能、氷と雷の耐性が100、物理と炎の耐性が75になる。
+Glassified: Cannot act, gain 100 ice and lightning resist, 75 fire resist, lose 100 physical resist.	Glassified: 行動不能、氷と雷耐性100、火耐性75、物理耐性100を失う。
+Frozen: Cannot act.  Ends upon taking fire or physical damage.  Cannot affect units with 100 ice resist.	Frozen: 行動不能。 炎か物理ダメージを受けると終了する。 氷耐性が100のユニットには影響しない。
+Berserked: Become hostile to all other units.  Will attack and be attacked by allies.	Berserked: 他の全てのユニットに対して敵対心を持つようになる。 味方を攻撃し、味方から攻撃されるようになる。
+Blind: All spell ranges reduced to 1.	Blind: 全てのスペルの射程が1になる。
+Channeling: Will continue to cast previous spell with same target if no other action is taken.	Channeling: 他のアクションを起こさなければ、同じターゲットに前のスペルをかけ続ける。
+Shield (SH): If a unit with SH would be dealt damage, it loses 1 SH instead.	Shield (SH): シールドを持つユニットがダメージを受ける場合、代わりに1SHを失う。
+
+WELCOME\nWelcome to Rift Wizard.\nPress H for a full help screen and details on all the game's controls.\nMouseover something for a detailed description of what it does.\nPress S to purchase a spell.	ようこそRiftWizardへ\nHを押すことでヘルプがいつでも閲覧できます。\n大抵のものはマウスカーソルを合わせれば\n詳細が確認できます。\nSボタンでSpellを買う画面へすぐに飛べます。
+
 Welcome back Wizard, to the ruins of the universe.	ウィザードよ、三千世界の廃墟へようこそ。
 Aeons passed while you slumbered.	そなたが眠っている間に何世紀もの時が流れてしまった。
 You have sleptwalk across many worlds.	これまで多くの世界を渡ってきた見聞してきたな。
@@ -32,14 +98,18 @@ Your purpose you remember.  Revenge.	ただ目的だけは覚えているだろ�
 The Dark Wizard Mordred is nearby.	闇のウィザード、モードレッドがすぐ近くにいる。
 Perhaps he is what woke you?	そなたが目覚めたのもあの男の存在故かもしれない。
 Regain your power, and slay Mordred.	力を取り戻せ、モードレッドを倒すのだ。
+
+
 Healing Potion	ヒーリングポーション
-Drinking this potion restores the drinker to full health	このポーションを飲んだものはHPが全回復する。
+Drinking this potion restores the drinker to full health.\nCannot be used while poisoned.	このポーションを飲んだものはHPが全回復する。\n毒状態のときは使えない。
 Mana Potion	マナポーション
 Refresh charges for all of your spells	全ての魔法を満タンまでチャージする
 Teleporter	テレポーター
-Teleport anywhere on the map once	すきな場所へテレポートできる。使い切り
+Teleport anywhere on the map.	すきな場所へテレポートできる
+
+
+
 Nature	[自然:Nature]
 Conjuration	[召喚術:Conjuration]
-Summon a wolf.	狼を召喚
-The wolf has [11_HP:minion_health].	狼は[11_HP:minion_health]を持ち、
-The wolf has a melee attack which deals [5_physical:physical] damage.	狼は[5_physical:physical]を与える。
+
+Deals [@_dark:dark] damage to one target.\nSlain living units are raised as skeletons.\nRaised skeletons have max HP equal to that of the slain unit, and deal [@_physical:physical] damage in melee.\nSkeletons of flying units can fly.	ターゲット1人に\n[@_dark:dark] ダメージを与える.\nteststs..test.\n殺害された生体ユニットは\nスケルトンとして蘇る\n蘇ったスケルトンは\n殺されたユニットと同じ\n最大HPを持ち近接で\n[@_physical:physical] ダメージを与える\n飛行ユニットのスケルトンは\n空を飛ぶことができる

@@ -383,7 +383,7 @@ class Row():
 			for word in line:
 				old_linesize = pygameview.linesize
 				pygameview.linesize = self.linesize
-				pygameview.draw_string(word.text+" ", draw_pane, cur_x, cur_y, color=word.color, mouse_content=self.mouse_content if self.selectable else None, font=self.font)
+				pygameview.draw_string(word.text+" "+"tsts", draw_pane, cur_x, cur_y, color=word.color, mouse_content=self.mouse_content if self.selectable else None, font=self.font)
 				pygameview.linesize = old_linesize
 
 				cur_x += self.font.size(word.text+" ")[0]
