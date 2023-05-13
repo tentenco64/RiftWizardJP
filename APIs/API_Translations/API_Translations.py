@@ -88,10 +88,10 @@ def declare_untranslated_string(string):
 	# 	untranslated_strings.add(string)
 	pass
 
-#num_p = re.compile(r"(?<=\[)\d+")
 num_p = re.compile(r"\d+")
 d_p = re.compile(r"%d")
 s_p = re.compile(r"%s")
+a_p = re.compile(r"\[%a\]")
 item_p = re.compile(r"A%d  ")
 spell_p = re.compile(r" %d  ")
 damage_p = re.compile(r"^ %d ")
@@ -99,58 +99,82 @@ resist_p = re.compile(r"^-?%d% ")
 spell_expo_p=re.compile(r"%d - ")
 word_p = re.compile(r"\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*")
 gate_p = re.compile(r"(?<=Spawns a )\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*(?= every)")
+learn_p = re.compile(r"(?<=Learn )\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*(?= for)")
+#attribute_p = re.compile(r"(?<=\[)[a-zA-Z]+?(?=\])")
+attribute_p = re.compile(r"\[[a-zA-Z]+?\]")
 
 def translate(string):
+	if translation is None:
+		return string
+	translated_string = ""
 	menu_flag = False
 	damage_flag = False
 	num_list=[]
-	monster_name = ""
+	attribute_list=[]
+	name = ""
 
-	string = repr(string)[1:-1]
-	print(string)
-	org_str = string
-	if num_p.search(string):
-		num_list = [m.group() for m in num_p.finditer(string)]
-		string = num_p.sub(r"%d", string)
+	raw_string = repr(string)[1:-1]
 
-	if gate_p.search(string):
-		monster_name = gate_p.search(string).group()
-		string = gate_p.sub(r"%s", string)
+	string_list = raw_string.split(r"\n")
 
-	if item_p.search(string) or spell_p.search(string) or spell_expo_p.search(string):
-		menu_flag = True
-		string = word_p.search(string).group()
-	print(string)
-	if damage_p.search(string) or resist_p.search(string):
-		damage_flag = True
-		print("damage_flag: on")
-		string = word_p.search(string).group()
-		print("resist:"+string)
+	for string in string_list:
+		org_str = string
 
-	if translation is None:
-		return string
-	
-	if string in translation:
-		if menu_flag:
-			name=translation[string]
-			space = 10 - len(name)
-			string = word_p.sub("   "+name+" "*space, org_str)
-		elif damage_flag:
-			name=translation[string]
-			string = word_p.sub(name, org_str)
-		else:
-			string = translation[string]
-		for num in num_list:
-			string = d_p.sub(num, string, 1)
-		string = s_p.sub(monster_name, string)
-		return string
-	else:
-		string = org_str
-		for num in num_list:
-			string = d_p.sub(num, string, 1)
-		string = s_p.sub(monster_name, string)
-		return string
-	
+		if num_p.search(string): # 数字を持つ場合%dに変換
+			num_list = [m.group() for m in num_p.finditer(string)]
+			string = num_p.sub(r"%d", string)
+
+		if gate_p.search(string): # ゲートから出現するモンスター名を%sに変換
+			name = gate_p.search(string).group()
+			string = gate_p.sub(r"%s", string)
+		if learn_p.search(string): # 習得するスキル名を%sに変換
+			name = learn_p.search(string).group()
+			string = learn_p.sub(r"%s", string)
+
+		if attribute_p.search(string): # shrineで使用される属性名を%aに変換
+			attribute_list = [m.group() for m in attribute_p.finditer(string)]
+			string = attribute_p.sub(r"[%a]", string)
+
+		if item_p.search(string) or spell_p.search(string) or spell_expo_p.search(string): # インベントリ表示からアイテム名や呪文名を抽出
+			menu_flag = True
+			string = word_p.search(string).group()
+
+		if damage_p.search(string) or resist_p.search(string): # モンスターの攻撃力表記や抵抗の表記から属性を抽出
+			damage_flag = True
+			string = word_p.search(string).group()
+		print(string)
+		if string in translation: # 対応する翻訳がある場合の処理
+			if menu_flag: # インベントリ表示用の処理
+				name=translation[string]
+				space = 10 - len(name)
+				string = word_p.sub("   "+name+" "*space, org_str)
+			elif damage_flag: # モンスターステータス表示用の処理
+				name=translation[string]
+				string = word_p.sub(name, org_str)
+			else:
+				string = translation[string]
+			for num in num_list: # %dを元の表記に戻す
+				string = d_p.sub(num, string, 1)
+			for attribute in attribute_list: # %aを元の表記に戻す
+				print(attribute)
+				if attribute in translation:
+					print("founded")
+					print(translation[attribute])
+					attribute = translation[attribute]
+				string = a_p.sub(attribute, string, 1)
+				print(string)
+			string = s_p.sub(name, string) # %sを元の表記に戻す
+		else: # 対応する翻訳が無い場合、元の状態に戻す
+			string = org_str
+			for num in num_list:
+				string = d_p.sub(num, string, 1)
+			string = s_p.sub(name, string)
+
+		translated_string += string
+	return translated_string
+
+
+
 
 """
 	if string in translation:

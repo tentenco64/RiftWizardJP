@@ -19,6 +19,9 @@ Yes	はい
 No	いいえ
 (Defeat all enemies and destroy all gates to unlock)	全ての敵を倒し\n全てのゲートを破壊することで\nアンロックされる
 
+Return to Game	ゲームに戻る
+Save and Exit	タイトルに戻る
+
 Base Game Settings:	ゲーム設定:
   How to Play	  遊び方
   Sound Volume:  %d	  サウンドボリューム:  %d
@@ -85,15 +88,19 @@ pgup/pgdown: view descriptions of spell upgrades (when viewing spell description
 
 Stunned: Cannot act.	Stunned: 行動不能になる。
 Poisoned: Take 1 poison damage per turn and cannot heal.	Poisoned: 1ターンに1回、毒のダメージを受け、回復できない。
-Petrified: Cannot act, gain 100 ice and lightning resist, gain 75 physical and fire resist.	Petrified: 行動不能、氷と雷の耐性が100、物理と炎の耐性が75になる。
-Glassified: Cannot act, gain 100 ice and lightning resist, 75 fire resist, lose 100 physical resist.	Glassified: 行動不能、氷と雷耐性100、火耐性75、物理耐性100を失う。
-Frozen: Cannot act.  Ends upon taking fire or physical damage.  Cannot affect units with 100 ice resist.	Frozen: 行動不能。 炎か物理ダメージを受けると終了する。 氷耐性が100のユニットには影響しない。
+Petrified: Cannot act, gain 100 ice and lightning resist, gain 75 physical and fire resist.	Petrified: 行動不能、冷気と稲妻の耐性が100、物理と炎の耐性が75になる。
+Glassified: Cannot act, gain 100 ice and lightning resist, 75 fire resist, lose 100 physical resist.	Glassified: 行動不能、冷気と稲妻耐性100、炎耐性75、物理耐性100を失う。
+Frozen: Cannot act.  Ends upon taking fire or physical damage.  Cannot affect units with 100 ice resist.	Frozen: 行動不能。 炎か物理ダメージを受けると終了する。 冷気耐性が100のユニットには影響しない。
 Berserked: Become hostile to all other units.  Will attack and be attacked by allies.	Berserked: 他の全てのユニットに対して敵対心を持つようになる。 味方を攻撃し、味方から攻撃されるようになる。
 Blind: All spell ranges reduced to 1.	Blind: 全てのスペルの射程が1になる。
 Channeling: Will continue to cast previous spell with same target if no other action is taken.	Channeling: 他のアクションを起こさなければ、同じターゲットに前のスペルをかけ続ける。
 Shield (SH): If a unit with SH would be dealt damage, it loses 1 SH instead.	Shield (SH): シールドを持つユニットがダメージを受ける場合、代わりに1SHを失う。
 
-WELCOME\nWelcome to Rift Wizard.\nPress H for a full help screen and details on all the game's controls.\nMouseover something for a detailed description of what it does.\nPress S to purchase a spell.	ようこそRiftWizardへ\n\nHを押すことで\nヘルプがいつでも閲覧できます\n\n大抵のものは\nマウスカーソルを合わせれば\n詳細が確認できます\n\nSボタンでSpellを買う画面へすぐに飛べます
+WELCOME	
+Welcome to Rift Wizard.	ようこそRiftWizardへ\n\n
+Press H for a full help screen and details on all the game's controls.	Hを押すことで\nヘルプがいつでも閲覧できます\n\n
+Mouseover something for a detailed description of what it does.	大抵のものは\nマウスカーソルを合わせれば\n詳細が確認できます\n\n
+Press S to purchase a spell.	SボタンでSpellが習得出来ます
 
 Welcome back Wizard, to the ruins of the universe.	ウィザードよ、万物の廃墟へよくぞ戻った。
 Aeons passed while you slumbered.	そなたが眠っている間に何世紀もの時が流れてしまった。
@@ -112,56 +119,59 @@ Order and justice will soon return to the universe.	この世界にもじき、�
 Exhausted, you fade from conciousness back into sleep.	疲れ果てたあなたは、再び眠りの世界へと落ちてゆく。
 Perhaps this time, you may dream.	今度こそ、夢を見ることが出来るだろう。
 
-You have stepped halfway through the rift.  \nYou may choose any point in the next world to materialize at (Enter, left click), or you may step out of this rift and return to the previous world (ESC, right click).\nBeware, for once you enter, there will be no way to return.	裂け目の半分を踏み越えた\n\n次の世界の好きな場所を\n選んで実体化するか\n(Enter/左クリック)\nこの裂け目から出て\n前の世界に戻るか\n(Esc/右クリック)\n選んでください\n\n一度入ってしまうと\nもう戻ることは出来ないので\n注意してください
+You have stepped halfway through the rift.  	裂け目の半分を踏み越えた\n\n
+You may choose any point in the next world to materialize at (Enter, left click), or you may step out of this rift and return to the previous world (ESC, right click).	次の世界の好きな場所を\n選んで実体化するか\n(Enter/左クリック)\nこの裂け目から出て\n前の世界に戻るか\n(Esc/右クリック)\n選んでください\n\n
+Beware, for once you enter, there will be no way to return.	一度入ってしまうと\nもう戻ることは出来ないので\n注意してください
 
 
-Healing Potion	Healing Potion
-Drinking this potion restores the drinker to full health.\nCannot be used while poisoned.	HPが全回復する\n毒状態のときは使えない
-Mana Potion	Mana Potion
+Healing Potion	HEALING POTION
+Drinking this potion restores the drinker to full health.	HPが全回復する\n
+Cannot be used while poisoned.	毒状態のときは使えない
+Mana Potion	MANA POTION
 Refresh charges for all of your spells	全ての魔法を満タンまでチャージする
-Teleporter	Teleporter
+Teleporter	TELEPORTER
 Teleport anywhere on the map.	すきな場所へテレポートする
-Chaos Bell	Chaos Bell
+Chaos Bell	CHAOS BELL
 Each enemy unit has a %d% chance to go berserk and attack its friends for %d turns	フロアの敵が%d％の確率で凶暴化し\n%dターンの間仲間を攻撃する
-Golden Stopwatch	Golden Stopwatch
+Golden Stopwatch	GOLDEN STOPWATCH
 Stun each enemy unit for %d turns	フロアの敵を\n%dターンの間スタンさせる
-Death Dice	Death Dice
+Death Dice	DEATH DICE
 Roll the dice to deal %d Dark damage to %d random enemies	サイコロを振って\n%dの闇属性ダメージを\nランダムな敵%d体に与える
-Energy Shield	Energy Shield
+Energy Shield	ENERGY SHIELD
 Gain immunity to [arcane], [dark], [lightning], and [holy] damage for %d turns	%dターンの間\n[arcane] [dark] [lightning] [holy]\nダメージに対する免疫を得る
-Stone Shield	Stone Shield
+Stone Shield	STONE SHIELD
 Gain immunity to [physical], [fire], and [ice] damage for %d turns	%dターンの間\n[physical] [fire] [ice]\nダメージに対する免疫を得る
-Earthquake Orb	Earthquake Orb
+Earthquake Orb	EARTHQUAKE ORB
 Deals %d physical damage and destroys walls on %d% of all level tiles.	%dの物理ダメージをフロアのタイルの%d%に与え\n壁を破壊する
-Dragon Horn	Dragon Horn
+Dragon Horn	DRAGON HORN
 Summon friendly dragons in each unoccupied adjacent square	隣接する未使用の各スクエアに\n味方ドラゴンを召喚する
-Portal Disruptor	Portal Disruptor
+Portal Disruptor	PORTAL DISRUPTOR
 Change the destination of all portals in the current level	現在のフロアにある\n全ポータルの行き先を変更する
-Shrine Disruptor	Shrine Disruptor
+Shrine Disruptor	SHRINE DISRUPTOR
 Remake all of the shrines in the current level.	現在のフロアにある\n全ての祠を作り直す
-Portal Key	Portal Key
+Portal Key	PORTAL KEY
 Create a new unlocked rift at a random location in the current level	フロアのランダムな場所に\n新しく解錠されたリフトを作る
-Orb of Corruption	Orb of Corruption
+Orb of Corruption	ORB OF CORRUPTION
 An evil and dangerous artifact capable of corrupting creation.  A wise Wizard would surely only use it in the most dire of circumstances.	創造物を腐敗させることができる\n邪悪で危険なアーティファクト\n\n賢明なウィザードなら\nきっと最も悲惨な状況下でしか\n使わないだろう
-Elixir of Youth	Elixir of Youth
+Elixir of Youth	ELIXIR OF YOUTH
 For %d turns, all spell charges spent are instantly refunded	%dターンの間/n消費した全てのスペルチャージが/n即座に払い戻される
-Aether Dagger	Aether Dagger
+Aether Dagger	AETHER DAGGER
 Enemy units in line of sight of the user lose all resistances and immunities	視界に入る敵のユニットが\nすべての抵抗と免疫を失う
-Oculus	Oculus
+Oculus	OCULUS
 For %d turns, your spells gain %d range and do not require line of sight	%dターンの間\n自分の魔法は射程距離が%d伸び\n視線を必要としない
-Memory Enhancement	Memory Enhancement
+Memory Enhancement	MEMORY ENHANCEMENT
 The effect of memory orbs is doubled	メモリーオーブの効果が倍になる
-Draught of Memories	Draught of Memories
+Draught of Memories	DRAUGHT OF MEMORIES
 For %d turns, gain double the effect of each memory orb you pick up	%dターンの間\n拾ったメモリーオーブの効果を倍にする
-Bag of Spikes	Bag of Spikes
+Bag of Spikes	BAG OF SPIKES
 Summon %d friendly rolling spikeballs	%d体の友好的な\nrolling spikeballsを召喚する
-Bag of Bags	Bag of Bags
+Bag of Bags	BAG OF BAGS
 Summon %d friendly bags of bugs	%d体の友好的な\nbags of bugsを召喚する
-Troll Crown	Troll Crown
+Troll Crown	TROLL CROWN
 Creates %d friendly troll gates	%dつの友好的な\ntroll gatesを作成する
-Storm Troll Crown	Storm Troll Crown
+Storm Troll Crown	STORM TROLL CROWN
 Creates %d friendly storm troll gates	%dつの友好的なstorm troll gatesを作成する
-Earth Troll Crown	Earth Troll Crown
+Earth Troll Crown	EARTH TROLL CROWN
 Creates %d friendly earth troll gates	%dつの友好的な\nearth troll gatesを作成する
 
 
@@ -170,11 +180,13 @@ Learn a new spell	呪文を学ぶ
 Learn New Skill (K)	スキルを学ぶ (K)
 Learn a new skill	スキルを学ぶ
 
+Learn %s for %d SP?	%sを%d SPで覚え直す？
+
  %d Upgrades Available	*%dつのアップグレードが可能
 
-Fire	Fire:火
-Lightning	Lightning:光
-Ice	Ice:氷
+Fire	Fire:炎
+Lightning	Lightning:稲妻
+Ice	Ice:冷気
 Nature	Nature:自然
 Arcane	Arcane:秘術
 Dark	Dark:暗黒
@@ -204,13 +216,88 @@ Tongue	Tongue:舌
 Slime	Slime:スライム
 Shield	Shield:盾
 
+[fire]	[炎:fire]
+[lightning]	[稲妻:lightning]
+[ice]	[冷気:ice]
+[nature]	[自然:nature]
+[arcane]	[秘術:arcane]
+[dark]	[暗黒:dark]
+[holy]	[破邪:holy]
+[sorcery]	[魔術:sorcery]
+[conjuration]	[召喚:conjuration]
+[enchantment]	[付与:enchantment]
+[word]	[言霊:word]
+[orb]	[球:orb]
+[dragon]	[龍:dragon]
+[translocation]	[転移:translocation]
+[metallic]	[金属:metallic]
+[eye]	[瞳術:eye]
+[chaos]	[混沌:chaos]
+[undead]	[死霊:undead]
+[elemental]	[元素:elemental]
+[heal]	[治癒:heal]
+[acid]	[酸:acid]
+[demon]	[悪魔:demon]
+[spider]	[蜘蛛:spider]
+[poison]	[毒:poison]
+[living]	[生物:living]
+[construct]	[建造物:construct]
+[eye]	[目:eye]
+[glass]	[ガラス:glass]
+[tongue]	[舌:tongue]
+[slime]	[スライム:slime]
+[shield]	[盾:shield]
+
+[%d_physical:physical]	[%d_物理:physical]
+[%d_fire:fire]	[%d_炎:fire]
+[%d_lightning:lightning]	[%d_稲妻:lightning]
+[%d_ice:ice]	[%d_冷気:ice]
+[%d_nature:nature]	[%d_自然:nature]
+[%d_arcane:arcane]	[%d_秘術:arcane]
+[%d_dark:dark]	[%d_暗黒:dark]
+[%d_holy:holy]	[%d_破邪:holy]
+[%d_sorcery:sorcery]	[%d_魔術:sorcery]
+[%d_conjuration:conjuration]	[%d_召喚:conjuration]
+[%d_enchantment:enchantment]	[%d_付与:enchantment]
+[%d_word:word]	[%d_言霊:word]
+[%d_orb:orb]	[%d_球:orb]
+[%d_dragon:dragon]	[%d_龍:dragon]
+[%d_translocation:translocation]	[%d_転移:translocation]
+[%d_metallic:metallic]	[%d_金属:metallic]
+[%d_eye:eye]	[%d_瞳術:eye]
+[%d_chaos:chaos]	[%d_混沌:chaos]
+[%d_undead:undead]	[%d_死霊:undead]
+[%d_elemental:elemental]	[%d_元素:elemental]
+[%d_heal:heal]	[%d_治癒:heal]
+[%d_acid:acid]	[%d_酸:acid]
+[%d_demon:demon]	[%d_悪魔:demon]
+[%d_spider:spider]	[%d_蜘蛛:spider]
+[%d_poison:poison]	[%d_毒:poison]
+[%d_living:living]	[%d_生物:living]
+[%d_construct:construct]	[%d_建造物:construct]
+[%d_eye:eye]	[%d_目:eye]
+[%d_glass:glass]	[%d_ガラス:glass]
+[%d_tongue:tongue]	[%d_舌:tongue]
+[%d_slime:slime]	[%d_スライム:slime]
+[%d_shield:shield]	[%d_盾:shield]
+
+
 Memory Orb	記憶のオーブ
 Grants %d SP	%d SPを獲得する
 
 Melee	近接攻撃
 
-Resist Ice	氷への耐性
-Resist Poison	ポーションへの耐性
+Resist Physical	物理耐性
+Resist Poison	ポーション耐性
+Resist Fire	炎耐性
+Resist Ice	氷耐性
+Resist Lightning	雷耐性
+Resist Nature	自然耐性
+Resist Arcane	秘術耐性
+Resist Dark	暗黒耐性
+Resist Holy	破邪耐性
+Resist Poison	毒耐性
+Resist Acid	酸耐性
 
 Physical damage	物理ダメージ
 
@@ -218,7 +305,10 @@ Flying	飛行
 Immobile	不動
 
 Death Bolt	Death Bolt
-Deals [%d_dark:dark] damage to one target.\nSlain living units are raised as skeletons.\nRaised skeletons have max HP equal to that of the slain unit, and deal [%d_physical:physical] damage in melee.\nSkeletons of flying units can fly.	ターゲット1人に\n[%d_dark:dark] ダメージを与える\n殺害された生体ユニットは\nスケルトンとして蘇る\n蘇ったスケルトンは\n殺されたユニットと同じ\n最大HPを持ち近接で\n[%d_physical:physical] ダメージを与える\n飛行ユニットのスケルトンは\n空を飛ぶことができる
+Deals [%d_dark:dark] damage to one target.	ターゲット1人に\n[%d_dark:dark] ダメージを与える\n
+Slain living units are raised as skeletons.	殺害された生体ユニットは\nスケルトン     、として蘇る     。\n
+Raised skeletons have max HP equal to that of the slain unit, and deal [%d_physical:physical] damage in melee.	蘇ったスケルトンは\n殺されたユニットと同じHPを持ち\n近接で   [%d_physical:physical] ダメージを与える\n
+Skeletons of flying units can fly.	飛行ユニットのスケルトンは\n空を飛ぶことができる
 
 Spawns a %s every %d to %d turns.\n\nNext spawn: %d turns	%dから%dターン毎に%sが出現する\n次の出現は%dターン後
 
@@ -270,7 +360,7 @@ Whenever this spell kills an enemy unit, deal [18_holy:holy] damage to the close
 For each 15 damage dealt by this spell or a minion it summons, deal [9_ice:ice] or [9_lightning:lightning] damage to a random enemy unit.
 
 
-Enhances [arcane] or [lightning] or [dark] spell with:\nFor each 30 damage dealt by this spell, deal [1_arcane:arcane] or [1_physical:physical] damage to all enemies.
+For each %d damage dealt by this spell, deal [%d_arcane:arcane] or [%d_physical:physical] damage to all enemies.	この呪文によって与えられた\n%dダメージごとに\n全ての敵に [%d_秘術:arcane] \nまたは [%d_物理:physical] のダメージを与える。\n
 
 
 Whenever you use an item, gain 1 charge of this spell.
@@ -294,3 +384,12 @@ For each 80 damage dealt by this spell or a minion it summons, summon a deathchi
 Whenever this spell kills a unit, all allied minions in line of sight gain +3 damage for 5 turns.
 Whenever you cast this spell, deal 27 [physical] damage to 1 enemy in line of sight per spell level.
 Whenever this spell kills a [lightning] or [fire] unit, summon a living scroll of fire or lightning at that unit's location.\nWhenever you cast the last charge of this spell, summon a Chaos Quill for 36 turns.
+
+
+Enhances [%a] spell with:	[%a] の魔法を強化する\n
+Enhances [%a] or [%a] spell with:	[%a] か [%a] の魔法を強化する\n
+Enhances [%a] or [%a] or [%a] spell with:	[%a] か [%a] か \n[%a] の魔法を強化する\n
+Enhances [%a] or [%a] or [%a] or [%a] spell with:	[%a] か [%a] か \n[%a] か[%a] の魔法を強化する\n
+
+Limit %d shrine per spell.	1つの呪文につき\n1つの祠のみ効果を発揮する
+Can be applied only to [sorcery] and [enchantment] spells.	[sorcery] か[enchantment] の呪文にのみ適用可能です
