@@ -3,6 +3,7 @@
 import mods.API_Universal.APIs.API_OptionsMenu.API_OptionsMenu as API_OptionsMenu
 import os
 import pygame
+import re
 
 NO_TRANSLATION = 'English (default)'
 
@@ -75,7 +76,7 @@ def load_translation(self):
 
 	if font_filename != None:
 		font_path = os.path.join('mods','API_Universal','translations', self.options['translation'], font_filename)
-		translation_font = pygame.font.Font(font_path, 16)
+		translation_font = pygame.font.Font(font_path, 20)
 	else:
 		translation_font = None
 
@@ -87,33 +88,92 @@ def declare_untranslated_string(string):
 	# 	untranslated_strings.add(string)
 	pass
 
-import re
-
-num_p = re.compile(r"\[[0-9]+")
-d_p = re.compile(r"@")
-hiragana_p = re.compile(r"[\u3041-\u309F]+") # ひらがなの正規表現
+#num_p = re.compile(r"(?<=\[)\d+")
+num_p = re.compile(r"\d+")
+d_p = re.compile(r"%d")
+s_p = re.compile(r"%s")
+item_p = re.compile(r"A%d  ")
+spell_p = re.compile(r" %d  ")
+damage_p = re.compile(r"^ %d ")
+resist_p = re.compile(r"^-?%d% ")
+spell_expo_p=re.compile(r"%d - ")
+word_p = re.compile(r"\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*")
+gate_p = re.compile(r"(?<=Spawns a )\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*(?= every)")
 
 def translate(string):
+	menu_flag = False
+	damage_flag = False
+	num_list=[]
+	monster_name = ""
+
 	string = repr(string)[1:-1]
-	print("String:"+string)
+	print(string)
+	org_str = string
 	if num_p.search(string):
-		num_list = [m.group()[1:] for m in num_p.finditer(string)]
-		print("num_list:",end="")
-		print(num_list)
-		string = num_p.sub(r"[@", string)
+		num_list = [m.group() for m in num_p.finditer(string)]
+		string = num_p.sub(r"%d", string)
 
-	if translation == None:
+	if gate_p.search(string):
+		monster_name = gate_p.search(string).group()
+		string = gate_p.sub(r"%s", string)
+
+	if item_p.search(string) or spell_p.search(string) or spell_expo_p.search(string):
+		menu_flag = True
+		string = word_p.search(string).group()
+	print(string)
+	if damage_p.search(string) or resist_p.search(string):
+		damage_flag = True
+		print("damage_flag: on")
+		string = word_p.search(string).group()
+		print("resist:"+string)
+
+	if translation is None:
 		return string
-
+	
 	if string in translation:
+		if menu_flag:
+			name=translation[string]
+			space = 10 - len(name)
+			string = word_p.sub("   "+name+" "*space, org_str)
+		elif damage_flag:
+			name=translation[string]
+			string = word_p.sub(name, org_str)
+		else:
+			string = translation[string]
+		for num in num_list:
+			string = d_p.sub(num, string, 1)
+		string = s_p.sub(monster_name, string)
+		return string
+	else:
+		string = org_str
+		for num in num_list:
+			string = d_p.sub(num, string, 1)
+		string = s_p.sub(monster_name, string)
+		return string
+	
+
+"""
+	if string in translation:
+		print(string)
 		if d_p.search(string):
+			print("%d finded")
 			string = translation[string]
 			for num in num_list:
 				string = d_p.sub(num, string, 1)
 			return string
+		elif menu_flag:
+			item_name = translation[string]
+			space = 10 - len(item_name)
+			string = word_p.sub("   "+item_name+" "*space, org_str)
 		else:
 			return translation[string]
+	for num in num_list:
+		string = d_p.sub(num, string, 1)
 	return string
+
+"""
+
+
 """
 	# attempt to translate word by word
 	#exp = '[\[\]:|\w\|\'|%|-]+|.| |,'
