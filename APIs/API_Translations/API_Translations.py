@@ -100,7 +100,6 @@ spell_expo_p=re.compile(r"%d - ")
 word_p = re.compile(r"\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*")
 gate_p = re.compile(r"(?<=Spawns a )\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*(?= every)")
 learn_p = re.compile(r"(?<=Learn )\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*(?= for)")
-#attribute_p = re.compile(r"(?<=\[)[a-zA-Z]+?(?=\])")
 attribute_p = re.compile(r"\[[a-zA-Z]+?\]")
 
 def translate(string):
@@ -116,6 +115,7 @@ def translate(string):
 	raw_string = repr(string)[1:-1]
 
 	string_list = raw_string.split(r"\n")
+
 
 	for string in string_list:
 		org_str = string
@@ -142,7 +142,7 @@ def translate(string):
 		if damage_p.search(string) or resist_p.search(string): # モンスターの攻撃力表記や抵抗の表記から属性を抽出
 			damage_flag = True
 			string = word_p.search(string).group()
-		print(string)
+
 		if string in translation: # 対応する翻訳がある場合の処理
 			if menu_flag: # インベントリ表示用の処理
 				name=translation[string]
@@ -156,13 +156,9 @@ def translate(string):
 			for num in num_list: # %dを元の表記に戻す
 				string = d_p.sub(num, string, 1)
 			for attribute in attribute_list: # %aを元の表記に戻す
-				print(attribute)
 				if attribute in translation:
-					print("founded")
-					print(translation[attribute])
 					attribute = translation[attribute]
 				string = a_p.sub(attribute, string, 1)
-				print(string)
 			string = s_p.sub(name, string) # %sを元の表記に戻す
 		else: # 対応する翻訳が無い場合、元の状態に戻す
 			string = org_str

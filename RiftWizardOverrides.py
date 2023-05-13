@@ -31,6 +31,7 @@ import mods.API_Universal.APIs.API_Spells.API_Spells as API_Spells
 import mods.API_Universal.APIs.API_DrawLevel.API_DrawLevel as API_DrawLevel
 import mods.API_Universal.APIs.API_DrawPanel.API_DrawPanel as API_DrawPanel
 import mods.API_Universal.EventSystem as EventSystem
+import re
 
 # ----------------------------------------------------------------------------------------+
 # try to import API_Multiplayer from either the mods/ folder or the API_Univerasl/ folder |
@@ -76,13 +77,11 @@ else:
 		string = API_Translations.translate(string)
 		translation_font = API_Translations.get_language_font(self)
 		font = font if translation_font == None else translation_font
-
 		__draw_string_old(self, string, surface, x, y, color=color, mouse_content=mouse_content, content_width=content_width, center=center, char_panel=char_panel, font=font)
 	RiftWizard.PyGameView.draw_string = draw_string
 
 
-
-__draw_wrapped_string_old = RiftWizard.PyGameView.draw_wrapped_string
+#__draw_wrapped_string_old = RiftWizard.PyGameView.draw_wrapped_string
 def draw_wrapped_string(self, string, surface, x, y, width, color=(255, 255, 255), center=False, indent=False, extra_space=False):
 	string = API_Translations.translate(string)
 	translation_font = API_Translations.get_language_font(self)
@@ -90,11 +89,76 @@ def draw_wrapped_string(self, string, surface, x, y, width, color=(255, 255, 255
 
 	old_font = self.font
 	self.font = font # because draw_wrapped_string doesn't take a font argument :(
-	retval = __draw_wrapped_string_old(self, string, surface, x, y, width, color=color, center=center, indent=indent, extra_space=extra_space)
+#	retval = __draw_wrapped_string_old(self, string, surface, x, y, width, color=color, center=center, indent=indent, extra_space=extra_space)
+	retval = api_wrapped_string(self, string, surface, x, y, width, color=color, center=center, indent=indent, extra_space=extra_space)
 	self.font = old_font
 
 	return retval
 RiftWizard.PyGameView.draw_wrapped_string = draw_wrapped_string
+
+tooltip_colors = RiftWizard.tooltip_colors
+
+def api_wrapped_string(self, string, surface, x, y, width, color=(255, 255, 255), center=False, indent=False, extra_space=False):
+	lines = string.split('\n')
+
+	cur_x = x
+	cur_y = y
+	linesize = self.linesize
+	num_lines = 0
+
+#	char_width = self.font.size('w')[0]
+	char_width = self.font.size('ｗ')[0]
+	chars_per_line = width // char_width
+	for line in lines:
+		exp = '[\[\]:|\w\|\'|%|-]+|.| |,'
+		words = re.findall(exp, line)
+		words.reverse()
+		cur_line = "" 
+		chars_left = chars_per_line
+
+		# Start each line all the way to the left
+		cur_x = x
+		assert(all(len(word) < chars_per_line) for word in words)
+
+		while words:
+			cur_color = color
+
+			word = words.pop()
+			if word != ' ':
+
+				# Process complex tooltips- strip off the []s and look up the color
+				if word and word[0] == '[' and word[-1] == ']':
+					tokens = word[1:-1].split(':')
+					if len(tokens) == 1:
+						word = tokens[0] # todo- fmt attribute?
+						cur_color = tooltip_colors[word.lower()].to_tup()
+					elif len(tokens) == 2:
+						word = tokens[0].replace('_', ' ')
+						cur_color = tooltip_colors[tokens[1].lower()].to_tup()
+
+				max_size = chars_left if word in [' ', '.', ','] else chars_left - 1
+				if len(word) > max_size:
+					cur_y += linesize
+					num_lines += 1
+					# Indent by one for next line
+					# インデントは不要なので消す
+#					cur_x = x + char_width
+					cur_x = x
+					chars_left = chars_per_line
+
+				self.draw_string(word, surface, cur_x, cur_y, cur_color, content_width=width)               
+			
+			cur_x += (len(word)) * char_width
+			chars_left -= len(word)
+
+		cur_y += linesize
+		num_lines += 1
+		if extra_space:
+			cur_y += linesize
+			num_lines += 1
+
+	return num_lines
+
 
 
 __pygameview_init_old = RiftWizard.PyGameView.__init__

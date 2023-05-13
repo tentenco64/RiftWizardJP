@@ -304,11 +304,16 @@ Physical damage	物理ダメージ
 Flying	飛行
 Immobile	不動
 
-Death Bolt	Death Bolt
-Deals [%d_dark:dark] damage to one target.	ターゲット1人に\n[%d_dark:dark] ダメージを与える\n
-Slain living units are raised as skeletons.	殺害された生体ユニットは\nスケルトン     、として蘇る     。\n
-Raised skeletons have max HP equal to that of the slain unit, and deal [%d_physical:physical] damage in melee.	蘇ったスケルトンは\n殺されたユニットと同じHPを持ち\n近接で   [%d_physical:physical] ダメージを与える\n
-Skeletons of flying units can fly.	飛行ユニットのスケルトンは\n空を飛ぶことができる
+## magic
+
+Deals [%d_dark:dark] damage to one target.	ターゲット1人に [%d_dark:dark] ダメージを与える。\n
+Slain living units are raised as skeletons.	殺害された生物はスケルトンとして蘇る。\n
+Raised skeletons have max HP equal to that of the slain unit, and deal [%d_physical:physical] damage in melee.	蘇ったスケルトンは殺されたユニットと同じHPを持ち、近接で [%d_physical:physical] ダメージを与える。\n
+Skeletons of flying units can fly.	飛行ユニットのスケルトンは空を飛ぶことができる。
+
+Deals [%d:damage] [%a] damage to units in a [%d_tile:radius] burst.	[%d:damage] [%a] ダメージを%dタイルの範囲で与える。
+
+
 
 Spawns a %s every %d to %d turns.\n\nNext spawn: %d turns	%dから%dターン毎に%sが出現する\n次の出現は%dターン後
 
