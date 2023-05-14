@@ -1,3 +1,5 @@
+##タイトル画面など
+
 CONTINUE RUN	途中から続ける
 ABANDON RUN	冒険を破棄する
 NEW GAME	新しい冒険
@@ -17,7 +19,7 @@ Character Sheet (C)	キャラクターシート(C)
 Really abandon the current run?	本当にこの冒険を破棄する？
 Yes	はい
 No	いいえ
-(Defeat all enemies and destroy all gates to unlock)	全ての敵を倒し\n全てのゲートを破壊することで\nアンロックされる
+(Defeat all enemies and destroy all gates to unlock)	全ての敵を倒し全てのゲートを破壊することでアンロックされる。
 
 Return to Game	ゲームに戻る
 Save and Exit	タイトルに戻る
@@ -97,10 +99,10 @@ Channeling: Will continue to cast previous spell with same target if no other ac
 Shield (SH): If a unit with SH would be dealt damage, it loses 1 SH instead.	Shield (SH): シールドを持つユニットがダメージを受ける場合、代わりに1SHを失う。
 
 WELCOME	
-Welcome to Rift Wizard.	ようこそRiftWizardへ\n\n
-Press H for a full help screen and details on all the game's controls.	Hを押すことで\nヘルプがいつでも閲覧できます\n\n
-Mouseover something for a detailed description of what it does.	大抵のものは\nマウスカーソルを合わせれば\n詳細が確認できます\n\n
-Press S to purchase a spell.	SボタンでSpellが習得出来ます
+Welcome to Rift Wizard.	ようこそRiftWizardへ。
+Press H for a full help screen and details on all the game's controls.	Hを押すことでヘルプがいつでも閲覧できます。
+Mouseover something for a detailed description of what it does.	大抵のものはマウスカーソルを合わせれば詳細が確認できます。
+Press S to purchase a spell.	Sボタンで呪文が習得出来ます。
 
 Welcome back Wizard, to the ruins of the universe.	ウィザードよ、万物の廃墟へよくぞ戻った。
 Aeons passed while you slumbered.	そなたが眠っている間に何世紀もの時が流れてしまった。
@@ -119,70 +121,98 @@ Order and justice will soon return to the universe.	この世界にもじき、�
 Exhausted, you fade from conciousness back into sleep.	疲れ果てたあなたは、再び眠りの世界へと落ちてゆく。
 Perhaps this time, you may dream.	今度こそ、夢を見ることが出来るだろう。
 
-You have stepped halfway through the rift.  	裂け目の半分を踏み越えた\n\n
-You may choose any point in the next world to materialize at (Enter, left click), or you may step out of this rift and return to the previous world (ESC, right click).	次の世界の好きな場所を\n選んで実体化するか\n(Enter/左クリック)\nこの裂け目から出て\n前の世界に戻るか\n(Esc/右クリック)\n選んでください\n\n
-Beware, for once you enter, there will be no way to return.	一度入ってしまうと\nもう戻ることは出来ないので\n注意してください
+You have stepped halfway through the rift.  	裂け目の半分を踏み越えた。
+You may choose any point in the next world to materialize at (Enter, left click), or you may step out of this rift and return to the previous world (ESC, right click).	次の世界の好きな場所を選んで実体化するか(Enter/左クリック)この裂け目から出て前の世界に戻るか(Esc/右クリック)選んでください。
+Beware, for once you enter, there will be no way to return.	一度入ってしまうともう戻ることは出来ないので注意してください。
 
+
+##キーコンフィグ
+up:	上移動:
+down:	下移動:
+left:	左移動:
+right:	右移動:
+up-right:	右上移動:
+up-left:	左上移動:
+down-right:	右下移動:
+down-left:	左下移動:
+pass/channel:	足踏み:
+confirm/cast:	呪文を撃つ:
+abort/cast:	呪文をキャンセルする:
+Spell %d:	呪文 %d:
+Spell Modifier Key:	呪文変更:
+Item Modifier Key:	アイテム変更:
+Next Target:	ターゲット変更:
+Show Line of Sight:	視界表示:
+Look:	見る:
+Walk:	歩く:
+Autopickup:	自動拾い:
+Character Sheet:	キャラクターシート表示:
+Spells:	呪文:
+Skills:	スキル:
+Items:	アイテム:
+Help:	ヘルプ表示
+Interact:	インタラクト:
+Message Log:	メッセージログ表示:
+Show Threat Zone:	脅威ゾーン表示:
+Prev tooltip:	前へ:
+Next tooltip:	次へ:
+Fast Forward:	早送り:
+
+
+##アイテム説明
 
 Healing Potion	HEALING POTION
-Drinking this potion restores the drinker to full health.	HPが全回復する\n
-Cannot be used while poisoned.	毒状態のときは使えない
+Drinking this potion restores the drinker to full health.	HPが全回復する。
+Cannot be used while poisoned.	毒状態のときは使えない。
 Mana Potion	MANA POTION
-Refresh charges for all of your spells	全ての魔法を満タンまでチャージする
+Refresh charges for all of your spells	全ての魔法を満タンまでチャージする。
 Teleporter	TELEPORTER
-Teleport anywhere on the map.	すきな場所へテレポートする
+Teleport anywhere on the map.	すきな場所へテレポートする。
 Chaos Bell	CHAOS BELL
-Each enemy unit has a %d% chance to go berserk and attack its friends for %d turns	フロアの敵が%d％の確率で凶暴化し\n%dターンの間仲間を攻撃する
+Each enemy unit has a %d% chance to go berserk and attack its friends for %d turns	フロアの敵が%d％の確率で凶暴化し %dターンの間仲間を攻撃する。
 Golden Stopwatch	GOLDEN STOPWATCH
-Stun each enemy unit for %d turns	フロアの敵を\n%dターンの間スタンさせる
+Stun each enemy unit for %d turns	フロアの敵を%dターンの間スタンさせる。
 Death Dice	DEATH DICE
-Roll the dice to deal %d Dark damage to %d random enemies	サイコロを振って\n%dの闇属性ダメージを\nランダムな敵%d体に与える
+Roll the dice to deal %d Dark damage to %d random enemies	サイコロを振って [%d_闇ダメージ:dark] を ランダムな敵%d体に与える。
 Energy Shield	ENERGY SHIELD
-Gain immunity to [arcane], [dark], [lightning], and [holy] damage for %d turns	%dターンの間\n[arcane] [dark] [lightning] [holy]\nダメージに対する免疫を得る
+Gain immunity to [%a], [%a], [%a], and [%a] damage for %d turns	%dターンの間 [%a] [%a] [%a] [%a] ダメージに対する免疫を得る。
 Stone Shield	STONE SHIELD
-Gain immunity to [physical], [fire], and [ice] damage for %d turns	%dターンの間\n[physical] [fire] [ice]\nダメージに対する免疫を得る
+Gain immunity to [%a], [%a], and [%a] damage for %d turns	%dターンの間 [%a] [%a] [%a] ダメージに対する免疫を得る。
 Earthquake Orb	EARTHQUAKE ORB
-Deals %d physical damage and destroys walls on %d% of all level tiles.	%dの物理ダメージをフロアのタイルの%d%に与え\n壁を破壊する
+Deals %d physical damage and destroys walls on %d% of all level tiles.	[%d_物理ダメージ:physical] をフロアのタイルの%d%に与え、壁を破壊する。
 Dragon Horn	DRAGON HORN
-Summon friendly dragons in each unoccupied adjacent square	隣接する未使用の各スクエアに\n味方ドラゴンを召喚する
+Summon friendly dragons in each unoccupied adjacent square	隣接する未使用の各スクエアに味方ドラゴンを召喚する。
 Portal Disruptor	PORTAL DISRUPTOR
-Change the destination of all portals in the current level	現在のフロアにある\n全ポータルの行き先を変更する
+Change the destination of all portals in the current level	現在のフロアにある全ポータルの行き先を変更する。
 Shrine Disruptor	SHRINE DISRUPTOR
-Remake all of the shrines in the current level.	現在のフロアにある\n全ての祠を作り直す
+Remake all of the shrines in the current level.	現在のフロアにある全ての祠を作り直す。
 Portal Key	PORTAL KEY
-Create a new unlocked rift at a random location in the current level	フロアのランダムな場所に\n新しく解錠されたリフトを作る
+Create a new unlocked rift at a random location in the current level	フロアのランダムな場所に新しく解錠されたリフトを作る。
 Orb of Corruption	ORB OF CORRUPTION
-An evil and dangerous artifact capable of corrupting creation.  A wise Wizard would surely only use it in the most dire of circumstances.	創造物を腐敗させることができる\n邪悪で危険なアーティファクト\n\n賢明なウィザードなら\nきっと最も悲惨な状況下でしか\n使わないだろう
+An evil and dangerous artifact capable of corrupting creation.  A wise Wizard would surely only use it in the most dire of circumstances.	創造物を腐敗させることができる邪悪で危険なアーティファクト。賢明なウィザードならきっと最も悲惨な状況下でしか使わないだろう。
 Elixir of Youth	ELIXIR OF YOUTH
-For %d turns, all spell charges spent are instantly refunded	%dターンの間/n消費した全てのスペルチャージが/n即座に払い戻される
+For %d turns, all spell charges spent are instantly refunded	%dターンの間、消費した全てのスペルチャージが即座に回復する。
 Aether Dagger	AETHER DAGGER
-Enemy units in line of sight of the user lose all resistances and immunities	視界に入る敵のユニットが\nすべての抵抗と免疫を失う
+Enemy units in line of sight of the user lose all resistances and immunities	視界に入る敵がすべての抵抗と免疫を失う。
 Oculus	OCULUS
-For %d turns, your spells gain %d range and do not require line of sight	%dターンの間\n自分の魔法は射程距離が%d伸び\n視線を必要としない
+For %d turns, your spells gain %d range and do not require line of sight	%dターンの間自分の魔法は射程距離が%d伸び視線を必要としない。
 Memory Enhancement	MEMORY ENHANCEMENT
-The effect of memory orbs is doubled	メモリーオーブの効果が倍になる
+The effect of memory orbs is doubled	メモリーオーブの効果が倍になる。
 Draught of Memories	DRAUGHT OF MEMORIES
-For %d turns, gain double the effect of each memory orb you pick up	%dターンの間\n拾ったメモリーオーブの効果を倍にする
+For %d turns, gain double the effect of each memory orb you pick up	%dターンの間拾ったメモリーオーブの効果を倍にする。
 Bag of Spikes	BAG OF SPIKES
-Summon %d friendly rolling spikeballs	%d体の友好的な\nrolling spikeballsを召喚する
+Summon %d friendly rolling spikeballs	%d体の友好的な rolling spikeballs を召喚する。
 Bag of Bags	BAG OF BAGS
-Summon %d friendly bags of bugs	%d体の友好的な\nbags of bugsを召喚する
+Summon %d friendly bags of bugs	%d体の友好的な bags of bugs を召喚する。
 Troll Crown	TROLL CROWN
-Creates %d friendly troll gates	%dつの友好的な\ntroll gatesを作成する
+Creates %d friendly troll gates	%dつの友好的な troll gates を作成する。
 Storm Troll Crown	STORM TROLL CROWN
-Creates %d friendly storm troll gates	%dつの友好的なstorm troll gatesを作成する
+Creates %d friendly storm troll gates	%dつの友好的な storm troll gates を作成する。
 Earth Troll Crown	EARTH TROLL CROWN
-Creates %d friendly earth troll gates	%dつの友好的な\nearth troll gatesを作成する
+Creates %d friendly earth troll gates	%dつの友好的な earth troll gates を作成する。
 
 
-Learn New Spell (S)	呪文を学ぶ (S)
-Learn a new spell	呪文を学ぶ
-Learn New Skill (K)	スキルを学ぶ (K)
-Learn a new skill	スキルを学ぶ
-
-Learn %s for %d SP?	%sを%d SPで覚え直す？
-
- %d Upgrades Available	*%dつのアップグレードが可能
+##属性一覧
 
 Fire	Fire:炎
 Lightning	Lightning:稲妻
@@ -203,6 +233,7 @@ Eye	Eye:瞳術
 Chaos	Chaos:混沌
 Undead	Undead:死霊
 Elemental	Elemental:元素
+
 Heal	Heal:治癒
 Acid	Acid:酸
 Demon	Demon:悪魔
@@ -216,6 +247,7 @@ Tongue	Tongue:舌
 Slime	Slime:スライム
 Shield	Shield:盾
 
+[physical]	[物理:physical]
 [fire]	[炎:fire]
 [lightning]	[稲妻:lightning]
 [ice]	[冷気:ice]
@@ -282,8 +314,20 @@ Shield	Shield:盾
 [%d_shield:shield]	[%d_盾:shield]
 
 
-Memory Orb	記憶のオーブ
+##アイテム（保持不可）
+
+Memory Orb	MEMORY ORB
 Grants %d SP	%d SPを獲得する
+Ruby Heart	RUBY HEART
+Increase max hp by %d	最大HPを%d増加させる
+
+##モンスター説明
+
+range	射程
+radius	範囲
+Range %d	射程: %d
+Charges: %d/%d 	チャージ: %d/%d
+Range %d (Ignores LOS)	射程: %d （視界無視）
 
 Melee	近接攻撃
 
@@ -300,27 +344,154 @@ Resist Poison	毒耐性
 Resist Acid	酸耐性
 
 Physical damage	物理ダメージ
+Physical or Fire damage	物理または炎ダメージ
 
 Flying	飛行
 Immobile	不動
 
-## magic
+turn cooldown	ターンのクールダウン
 
-Deals [%d_dark:dark] damage to one target.	ターゲット1人に [%d_dark:dark] ダメージを与える。\n
-Slain living units are raised as skeletons.	殺害された生物はスケルトンとして蘇る。\n
-Raised skeletons have max HP equal to that of the slain unit, and deal [%d_physical:physical] damage in melee.	蘇ったスケルトンは殺されたユニットと同じHPを持ち、近接で [%d_physical:physical] ダメージを与える。\n
-Skeletons of flying units can fly.	飛行ユニットのスケルトンは空を飛ぶことができる。
+Operate Cannon	キャノン砲操作
+Activate's a Cannon	キャノン砲を作動させる。
+Repair Cannon	キャノン砲修理
+Repair %d damage to a Cannon	キャノン砲を%dダメージ分修理する。
+Wander	さまよう
+Walk towards a nearby Cannon	キャノン砲に向かって歩く。
+Construct Cannon	キャノン砲製造
+Begins construction of a Cannon.	キャノン砲製造を開始する。
 
-Deals [%d:damage] [%a] damage to units in a [%d_tile:radius] burst.	[%d:damage] [%a] ダメージを%dタイルの範囲で与える。
+Cannon Blast	キャノン砲発射
+ %d Physical or Fire damage	%d 物理または炎ダメージ
+Must be at full HP to fire.	HPがMAXの時、発射する。
+Loses half max HP on firing.	発射時に最大HPの半分を失う。
+On death, deals %d Fire damage to all tiles in a radius of %d	死亡時、 [%d_炎ダメージ:fire] を%dの範囲に与える。
+On death, deals %d Physical damage to all tiles in a radius of %d	死亡時、 [%d_物理ダメージ:physical] を%dの範囲に与える。
+
+
+##呪文習得画面
+
+Learn New Spell (S)	呪文を学ぶ (S)
+Learn a new spell	呪文を学ぶ
+Learn New Skill (K)	スキルを学ぶ (K)
+Learn a new skill	スキルを学ぶ
+
+Learn %s for %d SP?	%sを%d SPで覚え直す？
+
+%s gains [%d_damage:damage]	%s を強化する: [%d_ダメージ:damage]
+%s gains [%d_range:range]	%s を強化する: [%d_射程:damage]
+%s gains [%d_max_charges:max_charges]	%s を強化する: [%d_max_charges:max_charges]
+
+
+%s can be upgraded with only %d %s upgrade	%s は%dつの %s アップグレードが可能
+bolt	ボルト
+
+Upgrades Available	つのアップグレードが可能
+%d - Damage	%d - ダメージ
+Damage	ダメージ
+%d damage	%d ダメージ
+%d - Max Charges	%d - マックスチャージ
+Max Charges	マックスチャージ
+%d max charges	%d マックスチャージ
+%d - Minion Damage	%d - ミニオンダメージ
+Minion Damage	ミニオンダメージ
+%d minion damage	%d ミニオンダメージ
+%d - Range	%d - 射程
+Range	射程
+%d range	%d 射程
+%d - Radius	%d - 爆発範囲
+Radius	爆発半径
+%d radius	%d 爆発半径
+%d - Num Targets	%d - ターゲット数
+Num Targets	ターゲット数
+%d num targets	%d ターゲット数
+%d - Stun Duration	%d - スタン時間
+Stun Duration	スタン時間
+%d stun duration	%d スタン時間
+%d - Chaos Ball	%d - カオス・ボール
+Chaos Ball	カオス・ボール
+%d - Energy Ball	%d - エナジー・ボール
+Energy Ball	エナジー・ボール
+%d - Ash Ball	%d - アッシュ・ボール
+Ash Ball	アッシュ・ボール
+Fireball randomly deals [%a], [%a], or [%a] damage.  If a unit is resistant to one or more of these damage types, fireball deals the damage type that unit is least resistant to.	FIREBALL はランダムに [%a] [%a] [%a] のダメージを与える。敵がこれらのダメージタイプのうち1つ以上に耐性を持っている場合、FIREBALLはそのユニットが最も耐性を持っていないダメージタイプを与える。
+Fireball blinds for %d turn.	FIREBALLは%dターンの盲目を与える。
+Fireball can be upgraded with only %d damage type upgrade	FIREBALLのダメージタイプのアップグレードは%dつだけ可能。
+%d - Meteor Size	%d - 隕石の大きさ
+Meteor Size	隕石の大きさ
+Increase the physical damage and stun radius from %d to %d	物理ダメージとスタン半径を%dから%dに増やす。
+%d - Max Channel	%d - 最大チャネル
+Max Channel	最大チャネル
+%d max channel	%d 最大チャネル
+%d - Withering	%d - ウィザリング
+Withering	ウィザリング
+%d - Soul Battery	%d - ソウル・バッテリー
+Soul Battery	ソウル・バッテリー
+%d - Channeling	%d - チャネリング
+Channeling	チャネリング
+Lightning bolt can be channeled for up to %d turns.	LIGHTNING BOLT は最大%dターンの間、チャネリング出来る。
+%d - Judgement Bolt	%d - ジャッジメント・ボルト
+Judgement Bolt	ジャッジメント・ボルト
+Lightning bolt also deals holy and dark damage	LIGHTNING BOLTは [破邪:holy] と [暗黒:dark] のダメージも与える。
+%d - Energy Bolt	%d - エナジー・ボルト
+Energy Bolt	エナジー・ボルト
+Lightning bolt also deals fire and arcane damage	LIGHTNING BOLTは [炎:fire] と [秘術:arcane] のダメージも与える。
+
+%d - Cascade	%d - カスケード
+Cascade	カスケード
+Hits from Annihilate will jump to nearby targets if the main target is killed	敵を倒した時、ANNIHILATEは近くの敵に連鎖する
+%d - Dark Annihilation	%d - ダーク・アナイアレイション
+Dark Annihilation	ダーク・アナイアレイション
+Annihilate deals an additional dark damage hit	ANNIHILATEは追加の[闇ダメージ:dark] を与える
+%d - Arcane Annihilation	%d - アルケン・アナイアレイション
+Annihilate deals an additional arcane damage hit	ANNIHILATEは追加の[秘術ダメージ:arcane] を与える
 
 
 
-Spawns a %s every %d to %d turns.\n\nNext spawn: %d turns	%dから%dターン毎に%sが出現する\n次の出現は%dターン後
+
+
+
+
+
+## 呪文
+
+Fireball	FIREBALL
+Deals [%d:damage] [%a] damage to units in a [%d_tile:radius] burst.	[%d:damage] [%a] ダメージを%dタイルの範囲で与える。\n
+
+Flame Tongue	FLAME TONGUE
+Deal fire damage in a beam	炎属性のビームを発射する。\n
+
+Meteor Shower	METEOR SHOWER
+Rains [%d_meteors:num_targets] down on random tiles in a [%d_tile:radius] radius each turn.	毎ターン [%dつの隕石:num_targets] が [半径%d:radius] のランダムなタイルに降り注ぐ。
+Meteors deal [%d_physical:physical] damage, destroy walls, and inflict stun for [%d_turns:duration].	隕石は [%d_物理ダメージ:physical] を与え、壁を破壊し、 [%d_ターン:duration] の間、スタンを付与する。
+Meteors also deal [%d_fire:fire] damage in a [%d_tile:radius] radius.	また、隕石は [%d_炎ダメージ:fire] を [半径%d:radius] に与える。
+This spell can be channeled for up to [%d_turns:duration].  The effect is repeated each turn the spell is channeled.	この呪文は最大 [%d_ターン:duration] までチャネリングすることができる。この効果はチャネリングが行われるたびに繰り返される。\n\n
+
+Lightning Bolt	LIGHTNING BOLT
+Deals [%d_lightning:lightning] damage in a beam.	[%d_稲妻ダメージ:lightning] のビームを発射する。\n
+
+Annihilate	ANNIHILATE
+Deals [%d_fire:fire] damage, [%d_lightning:lightning] damage, and [%d_physical:physical] damage to the target.	敵に [%d_炎ダメージ:fire] [%d_稲妻ダメージ:lightning] [%d_物理ダメージ:physical] を与える。\n
+
+
+
+Death Bolt	DEATH BOLT
+Deals [%d_dark:dark] damage to one target.	ターゲット1人に [%d_暗黒ダメージ:dark] を与える。
+Slain living units are raised as skeletons.	倒した敵はスケルトンとして蘇る。
+Raised skeletons have max HP equal to that of the slain unit, and deal [%d_physical:physical] damage in melee.	スケルトンは元々の敵と同じHPを持ち、近接で [%d_物理ダメージ:physical] を与える。
+Skeletons of flying units can fly.	飛行する敵のスケルトンは 空を飛ぶことができる。\n
+
+
+
+
+
+
+Spawns a %s every %d to %d turns.	%dから%dターン毎に%sが出現する。
+Next spawn: %d turns	次の出現は%dターン後
 
 Applies Poison for %d turns.  	%dターンの間毒を与える
 
 Heal for %d HP on cast	キャスト時にHPを%d回復させる
-Half of all [arcane] damage dealt by this spell is redealt as [holy] damage, and then again as [dark] damage.	この呪文によって与えられた\nすべての [arcane] ダメージの半分が\n[holy] ダメージとして\nそして再び\n[dark] ダメージとして再加算される
+Half of all [arcane] damage dealt by this spell is redealt as [holy] damage, and then again as [dark] damage.	この呪文によって与えられたすべての [arcane] ダメージの半分が[holy] ダメージとしてそして再び[dark] ダメージとして再加算される
 On damaging an enemy in a thunderstorm or blizzard, redeal 75% of the damage as [lightning] and 75% of the damage as [ice].
 Summoned minions gain [50_physical:physical] resist and [50_holy:holy] resist.
 Summoned minions reincarnate once
@@ -365,7 +536,7 @@ Whenever this spell kills an enemy unit, deal [18_holy:holy] damage to the close
 For each 15 damage dealt by this spell or a minion it summons, deal [9_ice:ice] or [9_lightning:lightning] damage to a random enemy unit.
 
 
-For each %d damage dealt by this spell, deal [%d_arcane:arcane] or [%d_physical:physical] damage to all enemies.	この呪文によって与えられた\n%dダメージごとに\n全ての敵に [%d_秘術:arcane] \nまたは [%d_物理:physical] のダメージを与える。\n
+For each %d damage dealt by this spell, deal [%d_arcane:arcane] or [%d_physical:physical] damage to all enemies.	この呪文によって与えられた %dダメージごとに全ての敵に [%d_秘術:arcane] または [%d_物理:physical] のダメージを与える。
 
 
 Whenever you use an item, gain 1 charge of this spell.
@@ -391,10 +562,10 @@ Whenever you cast this spell, deal 27 [physical] damage to 1 enemy in line of si
 Whenever this spell kills a [lightning] or [fire] unit, summon a living scroll of fire or lightning at that unit's location.\nWhenever you cast the last charge of this spell, summon a Chaos Quill for 36 turns.
 
 
-Enhances [%a] spell with:	[%a] の魔法を強化する\n
-Enhances [%a] or [%a] spell with:	[%a] か [%a] の魔法を強化する\n
-Enhances [%a] or [%a] or [%a] spell with:	[%a] か [%a] か \n[%a] の魔法を強化する\n
-Enhances [%a] or [%a] or [%a] or [%a] spell with:	[%a] か [%a] か \n[%a] か[%a] の魔法を強化する\n
+Enhances [%a] spell with:	[%a] の魔法に以下の効果を追加する: 
+Enhances [%a] or [%a] spell with:	[%a] か [%a] の魔法に以下の効果を追加する: 
+Enhances [%a] or [%a] or [%a] spell with:	[%a] か [%a] か [%a] の魔法に以下の効果を追加する: 
+Enhances [%a] or [%a] or [%a] or [%a] spell with:	[%a] か [%a] か [%a] か[%a] の魔法に以下の効果を追加する: 
 
-Limit %d shrine per spell.	1つの呪文につき\n1つの祠のみ効果を発揮する
+Limit %d shrine per spell.	1つの呪文につき1つの祠のみ効果を発揮する\n
 Can be applied only to [sorcery] and [enchantment] spells.	[sorcery] か[enchantment] の呪文にのみ適用可能です

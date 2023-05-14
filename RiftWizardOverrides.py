@@ -98,20 +98,34 @@ RiftWizard.PyGameView.draw_wrapped_string = draw_wrapped_string
 
 tooltip_colors = RiftWizard.tooltip_colors
 
+
 def api_wrapped_string(self, string, surface, x, y, width, color=(255, 255, 255), center=False, indent=False, extra_space=False):
 	lines = string.split('\n')
-
 	cur_x = x
 	cur_y = y
-	linesize = self.linesize
+	linesize = self.linesize+4
 	num_lines = 0
 
-#	char_width = self.font.size('w')[0]
-	char_width = self.font.size('ｗ')[0]
+	if self.options['translation'] == "JP_language":
+		char_width = self.font.size('ｗ')[0]
+	else:
+		char_width = self.font.size('w')[0]
 	chars_per_line = width // char_width
+	MENU_CHARS_MAX = 16
+	menu_width = char_width*MENU_CHARS_MAX
 	for line in lines:
 		exp = '[\[\]:|\w\|\'|%|-]+|.| |,'
 		words = re.findall(exp, line)
+		new_words=[]
+		# 文字数がオーバーした時に分割する
+		for word in words:
+			if self.font.size(word)[0] > menu_width:
+				splited_word = [word[x:x+MENU_CHARS_MAX] for x in range(0, len(word), MENU_CHARS_MAX)]
+				new_words.extend(splited_word)
+			else:
+				new_words.append(word)
+		words = new_words
+
 		words.reverse()
 		cur_line = "" 
 		chars_left = chars_per_line
@@ -136,7 +150,7 @@ def api_wrapped_string(self, string, surface, x, y, width, color=(255, 255, 255)
 						word = tokens[0].replace('_', ' ')
 						cur_color = tooltip_colors[tokens[1].lower()].to_tup()
 
-				max_size = chars_left if word in [' ', '.', ','] else chars_left - 1
+				max_size = chars_left if word in [' ', '.', ',','、','。'] else chars_left - 1
 				if len(word) > max_size:
 					cur_y += linesize
 					num_lines += 1
@@ -147,8 +161,7 @@ def api_wrapped_string(self, string, surface, x, y, width, color=(255, 255, 255)
 					chars_left = chars_per_line
 
 				self.draw_string(word, surface, cur_x, cur_y, cur_color, content_width=width)               
-			
-			cur_x += (len(word)) * char_width
+			cur_x += self.font.size(word)[0]
 			chars_left -= len(word)
 
 		cur_y += linesize

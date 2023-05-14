@@ -29,10 +29,11 @@ def translation_changed(self, cur_value):
 
 translation = None
 translation_font = None
+
 def load_translation(self):
 
 	global translation
-	global translation_font	
+	global translation_font
 	translation = dict()
 	translation_folder = os.path.join('mods','API_Universal','translations',self.options['translation'])
 	translation_filename = None
@@ -101,14 +102,20 @@ word_p = re.compile(r"\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*")
 gate_p = re.compile(r"(?<=Spawns a )\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*(?= every)")
 learn_p = re.compile(r"(?<=Learn )\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*(?= for)")
 attribute_p = re.compile(r"\[[a-zA-Z]+?\]")
+spell_gain_p = re.compile(r"^[\w ]+?(?= gains \[)")
+
+can_be_upgrade_spellname_p = re.compile(r"^[\w ]+?(?= can be upgraded with only )")
+can_be_upgrade_type_p = re.compile(r"(?<=with only %d )[\w ]+?(?= upgrade$)")
 
 def translate(string):
+	print(string)
 	if translation is None:
 		return string
 	translated_string = ""
 	menu_flag = False
 	damage_flag = False
 	num_list=[]
+	name_list=[]
 	attribute_list=[]
 	name = ""
 
@@ -124,18 +131,31 @@ def translate(string):
 			num_list = [m.group() for m in num_p.finditer(string)]
 			string = num_p.sub(r"%d", string)
 
-		if gate_p.search(string): # ゲートから出現するモンスター名を%sに変換
-			name = gate_p.search(string).group()
+		gate_m = gate_p.search(string)
+		if gate_m is not None: # ゲートから出現するモンスター名を%sに変換
+			name_list = [gate_m.group()]
 			string = gate_p.sub(r"%s", string)
-		if learn_p.search(string): # 習得するスキル名を%sに変換
-			name = learn_p.search(string).group()
+		learn_m = learn_p.search(string)
+		if learn_m is not None: # 習得するスキル名を%sに変換
+			name_list = [learn_m.group()]
 			string = learn_p.sub(r"%s", string)
+		spell_gain_m = spell_gain_p.match(string)
+		if spell_gain_m is not None:
+			end = spell_gain_m.end()
+			name_list = [string[:end].upper()]
+			string = spell_gain_p.sub(r"%s", string)
+		cbus_m = can_be_upgrade_spellname_p.match(string)
+		cbut_m = can_be_upgrade_type_p.search(string)
+		if (cbus_m and cbut_m) is not None:
+			name_list = [cbus_m.group().upper(), cbut_m.group()]
+			string = can_be_upgrade_spellname_p.sub(r"%s", string)
+			string = can_be_upgrade_type_p.sub(r"%s", string)
 
 		if attribute_p.search(string): # shrineで使用される属性名を%aに変換
 			attribute_list = [m.group() for m in attribute_p.finditer(string)]
 			string = attribute_p.sub(r"[%a]", string)
 
-		if item_p.search(string) or spell_p.search(string) or spell_expo_p.search(string): # インベントリ表示からアイテム名や呪文名を抽出
+		if item_p.search(string) or spell_p.search(string): # インベントリ表示からアイテム名や呪文名を抽出
 			menu_flag = True
 			string = word_p.search(string).group()
 
@@ -143,6 +163,7 @@ def translate(string):
 			damage_flag = True
 			string = word_p.search(string).group()
 
+		print(string)
 		if string in translation: # 対応する翻訳がある場合の処理
 			if menu_flag: # インベントリ表示用の処理
 				name=translation[string]
@@ -159,14 +180,13 @@ def translate(string):
 				if attribute in translation:
 					attribute = translation[attribute]
 				string = a_p.sub(attribute, string, 1)
-			string = s_p.sub(name, string) # %sを元の表記に戻す
+			for name in name_list:
+				string = s_p.sub(name, string, 1) # %sを元の表記に戻す
 		else: # 対応する翻訳が無い場合、元の状態に戻す
 			string = org_str
-			for num in num_list:
-				string = d_p.sub(num, string, 1)
-			string = s_p.sub(name, string)
 
 		translated_string += string
+	print(translated_string)
 	return translated_string
 
 
