@@ -102,7 +102,7 @@ word_p = re.compile(r"\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*")
 gate_p = re.compile(r"(?<=Spawns a )\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*(?= every)")
 learn_p = re.compile(r"(?<=Learn )\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*(?= for)")
 attribute_p = re.compile(r"\[[a-zA-Z]+?\]")
-spell_gain_p = re.compile(r"^[a-zA-Z ]+?(?= gains \[)")
+spell_gain_p = re.compile(r"^[a-zA-Z ]+?(?= gains \[?%d)")
 
 can_be_upgrade_spellname_p = re.compile(r"^[\w ]+?(?= can be upgraded with only )")
 can_be_upgrade_type_p = re.compile(r"(?<=with only %d )[\w ]+?(?= upgrade$)")
@@ -121,7 +121,6 @@ def translate(string):
 	raw_string = repr(string)[1:-1]
 
 	string_list = raw_string.split(r"\n")
-
 
 	for string in string_list:
 		org_str = string
@@ -165,7 +164,7 @@ def translate(string):
 			m = word_p.search(string)
 			if m is not None:
 				string = m.group()
-
+		print(string)
 		if string in translation: # 対応する翻訳がある場合の処理
 			if menu_flag: # インベントリ表示用の処理
 				name=translation[string]

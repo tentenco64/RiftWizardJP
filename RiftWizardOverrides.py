@@ -141,7 +141,6 @@ def api_wrapped_string(self, string, surface, x, y, width, color=(255, 255, 255)
 #				new_words.append(word)
 		new_words.append(new_word)
 		words = new_words
-		print(words)
 		words.reverse()
 		cur_line = "" 
 		chars_left = chars_per_line
