@@ -287,6 +287,10 @@ Shield	Shield:盾
 [shield]	[盾:shield]
 [petrify]	[石化:petrify]
 [Petrified]	[石化:petrify]
+[stunned]	[スタン:stunned]
+[Stunned]	[スタン:stunned]
+[berserk]	[狂乱:berserk]
+[Berserk]	[狂乱:berserk]
 
 [%d_physical:physical]	[%d_物理:physical]
 [%d_fire:fire]	[%d_炎:fire]
@@ -469,6 +473,39 @@ Summon a wolf.	ウルフを召喚する。
 The wolf has [%d_HP:minion_health].	ウルフは[%d_HP:minion_health]を持つ。
 The wolf has a melee attack which deals [%d_physical:physical] damage.	ウルフは[%d_物理:physical]ダメージを与える近接攻撃を持つ。\n
 
+Dire Wolf	DIRE WOLF
+Summon a dire wolf.	ダイア・ウルフを召喚する。
+
+Giant Bear	GIANT BEAR
+Summon a giant bear.	巨大熊を召喚する。
+The bear has [%d_HP:minion_health].	熊は[%d_HP:minion_health]を持つ。
+The bear has a melee attack which deals [%d_physical:physical] damage.	熊は近接攻撃で[%d_物理:physical]ダメージを与える。\n
+%d - Minion Attacks	%d - ミニオン攻撃回数
+Minion Attacks	ミニオン攻撃回数
+%d - Armored Bear	%d - アーマード・ベア
+Armored Bear	アーマード・ベア
+Summons an armored bear instead of a giant bear.  Armored bears have increased physical resistance and HP, but are vulnerable to lightning damage.	巨大熊の代わりに装甲熊を召喚する。装甲熊は[物理:physical]耐性とHPが上昇し、[雷:lightning]ダメージに弱い。
+%d - Venom Bear	%d - ヴェノム・ベア
+Venom Bear	ヴェノム・ベア
+Summons a venom bear instead of a giant bear.  Venom Bears have a poison bite, and heal whenever an enemy takes poison damage.	巨大熊の代わりに毒熊を召喚する。毒熊は毒を持つ噛み付き攻撃を持ち、敵が毒ダメージを受けるたびに回復する。
+%d - Blood Bear	%d - ブラッド・ベア
+Blood Bear	ブラッド・ベア
+Summons a blood bear instead of a giant bear.  Blood bears are resistant to dark damage, and deal increasing damage with each attack.	巨大熊の代わりにブラッドベアを召喚する。ブラッドベアは[暗黒:dark]ダメージに対する耐性を持ち、攻撃するたびにダメージが増加する。
+Attacks %d times.	%d回攻撃する。
+
+Sight of Blood	SIGHT OF BLOOD
+Must target a damaged [%a] unit.	ダメージを受けた[%a]を対象にする必要がある。
+The target is [%a] for [%d_turns:duration].	対象は[%d_ターン:duration]間[%a]状態になる。
+All [%a] units in line of sight of the target go [%a] for [%d_turns:duration].	対象が視界内にいる全ての[%a]は[%d_ターン:duration]間[%a]状態になる。
+[%a] units are hostile to all other units, they will attack and be attacked by their allies.	[%a]ユニットは他のすべてのユニットと敵対しており、味方を攻撃したり、味方の攻撃を受けたりする。\n
+
+
+%d - Demon Frenzy	%d - デーモン・フレンジー
+Demon Frenzy	デーモン・フレンジー
+Demon units are also affected	デーモンユニットも影響を受ける。
+%d - Blindcasting	%d - ブラインド・キャスティング
+Blindcasting	ブラインド・キャスティング
+Sight of Blood can be cast without line of sight	視界外からもSIGHT OF BLOODを発動できる。
 
 ##呪文習得画面
 
@@ -477,7 +514,7 @@ Learn a new spell	呪文を学ぶ
 Learn New Skill (K)	スキルを学ぶ (K)
 Learn a new skill	スキルを学ぶ
 
-Learn %s for %d SP?	%sを%d SPで覚え直す？
+Learn %s for %d SP?	%sを%d SPで学ぶ？
 
 %s gains [%d_damage:damage]	%s を強化する:\n%d ダメージ
 %s gains [%d_range:range]	%s を強化する:\n%d 射程
@@ -497,6 +534,8 @@ Learn %s for %d SP?	%sを%d SPで覚え直す？
 %s gains -%d Requires Los	%s を強化する:\n-%d 視界強化
 %s gains %d Storm Power	%s を強化する:\n %d 稲妻の力
 %s gains %d Petrify Duration	%s を強化する:\n %d 石化持続
+%s gains %d Minion Attacks	%s を強化する:\n %d ミニオン攻撃回数
+%s gains %d Demon Units	%s を強化する:\n %d デーモン・ユニット
 
 %s can be upgraded with only %d %s upgrade	\n%s は%dつの %s アップグレードが可能
 bolt	ボルト
@@ -578,10 +617,10 @@ Cascade	カスケード
 Hits from Annihilate will jump to nearby targets if the main target is killed	敵を倒した時、ANNIHILATEは近くの敵に連鎖する。
 %d - Dark Annihilation	%d - ダーク・アナイアレイション
 Dark Annihilation	ダーク・アナイアレイション
-Annihilate deals an additional dark damage hit	ANNIHILATEは追加の[暗黒ダメージ:dark]を与える。
+Annihilate deals an additional dark damage hit	ANNIHILATEは追加の[暗黒:dark]ダメージを与える。
 %d - Arcane Annihilation	%d - アルケン・アナイアレイション
 Arcane Annihilation	アルケン・アナイアレイション
-Annihilate deals an additional arcane damage hit	ANNIHILATEは追加の[秘術ダメージ:arcane]を与える。
+Annihilate deals an additional arcane damage hit	ANNIHILATEは追加の[秘術:arcane]ダメージを与える。
 
 %d - Void Teleport	%d - ヴォイド・テレポート
 Void Teleport	ヴォイド・テレポート
@@ -596,7 +635,7 @@ Storm Power	ストーム・パワー
 Radius and stun duration are doubled if the target is inside of a storm cloud.	ターゲットが嵐の雲の中にいる場合、範囲とスタンの持続時間は倍となる。
 %d - Heaven Strike	%d - ヘブン・ストライク
 Heaven Strike	ヘブン・ストライク
-Thunder Strike also deals holy damage	Thunder Strikeは聖なるダメージも与える。
+Thunder Strike also deals holy damage	Thunder Strikeは[破邪:holy]ダメージも与える。
 
 
 %d - Petrify Duration	%d - 石化持続
