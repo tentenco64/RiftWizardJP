@@ -285,6 +285,8 @@ Shield	Shield:盾
 [tongue]	[舌:tongue]
 [slime]	[スライム:slime]
 [shield]	[盾:shield]
+[petrify]	[石化:petrify]
+[Petrified]	[石化:petrify]
 
 [%d_physical:physical]	[%d_物理:physical]
 [%d_fire:fire]	[%d_炎:fire]
@@ -426,6 +428,47 @@ Gain [%d_lightning:lightning] resistance.	[%d_稲妻:lightning]耐性を得る�
 Gain [%d_physical:physical] resistance.	[%d_物理:physical]耐性を得る。
 This effect ends the first turn that you fail to cast a [%a] spell.	この効果はあなたが[稲妻:lightning]の呪文を唱えられなかったターンに終了する。\n
 
+Void Beam	VOID BEAM
+Deal [%d_arcane:arcane] damage and destroy walls in a beam.	ビーム内の壁を破壊し、[%d_秘術:arcane]ダメージを与える。\n
+
+Thunder Strike	THUNDER STRIKE
+Deal [%d_lightning:lightning] damage to the target.	ターゲットに[%d_稲妻:lightning]ダメージを与え、
+Stun all enemies in a [%d_tile:radius] burst around the target.	ターゲットの周囲の[%d_タイル:radius]範囲内の全ての敵をスタンさせる。\n
+
+Giant Strength	GIANT STRENGTH
+Stone Giant Form	ストーン・ジャイアント・フォーム
+Temporarily gain physical resistance and the ability to hurl boulders.	一時的に[物理:physical]抵抗力を得て、巨石を投げる能力を得る。\m
+
+Chaos Barrage	CHAOS BARRAGE
+Fire [%d_bolts:num_targets] of chaotic energy at random units in a cone.	円錐状にランダムなユニットに向けて[混沌:chaos]エネルギーの%dボルトを発射する。
+Each bolt randomly deals [%d_fire:fire], [%d_lightning:lightning], or [%d_physical:physical] damage.	各ボルトはランダムに[%d_炎:fire]、[%d_稲妻:lightning]、または[%d_物理:physical]ダメージを与える。\n
+
+Inferno	INFERNO
+Create a spreading inferno that deals damage each turn to units inside.	内部のユニットに毎ターンダメージを与える広がる炎を作り出す。
+A spreading cloud of fire. Deals %d damage to creatures caught within each turn.	広がる炎の雲。毎ターン、中にいる敵に%dダメージを与える。
+
+Disperse	DISPERSE
+Teleport all units in a [%d_tile:radius] radius to random locations	[%d_タイル:radius]内のすべてのユニットをランダムな位置にテレポートする。
+The caster is unaffected.	詠唱者には影響しない。\n
+
+Petrify	PETRIFY
+Inflict [%a] on the target for [%d_turns:duration].	対象に[%dターン:duration]の[%a]を与える。
+[%a] units cannot act.	[%a]したユニットは動くことができない。
+[%a] units gain [%d_ice:ice] resist.	[%a]したユニットは [%d_冷気:ice]抵抗を得る。
+[%a] units gain [%d_lightning:lightning] resist.	[%a]したユニットは [%d_稲妻:lightning]抵抗を得る。
+[%a] units gain [%d_physical:physical] resist.	[%a]したユニットは [%d_物理:physical]抵抗を得る。
+[%a] units gain [%d_fire:fire] resist.	[%a]したユニットは [%d_炎:fire]抵抗を得る。\n
+
+Petrification Aura	PETRIFICATION AURA
+Petrify nearby enemies each turn	毎ターン、近くの敵を石化させる
+Each turn, inflict [%a] on up to [%d:num_targets] unpetrified enemy units in a [%d_tile:radius] radius each turn.	毎ターン、最大[%d:num_targets]体まで[半径%dタイル:radius]内の敵ユニットに[%a]を与える。
+Lasts [%d_turns:duration].	[%dターン:duration]持続する。\n\n
+
+Wolf	WOLF
+Summon a wolf.	ウルフを召喚する。
+The wolf has [%d_HP:minion_health].	ウルフは[%d_HP:minion_health]を持つ。
+The wolf has a melee attack which deals [%d_physical:physical] damage.	ウルフは[%d_物理:physical]ダメージを与える近接攻撃を持つ。\n
+
 
 ##呪文習得画面
 
@@ -436,12 +479,12 @@ Learn a new skill	スキルを学ぶ
 
 Learn %s for %d SP?	%sを%d SPで覚え直す？
 
-%s gains [%d_damage:damage]	%s を強化する:\n%d_ダメージ
-%s gains [%d_range:range]	%s を強化する:\n%d_射程
-%s gains [%d_max_charges:max_charges]	%s を強化する:\n%d_最大チャージ
-%s gains [%d_radius:radius]	%s を強化する:\n%d_半径
+%s gains [%d_damage:damage]	%s を強化する:\n%d ダメージ
+%s gains [%d_range:range]	%s を強化する:\n%d 射程
+%s gains [%d_max_charges:max_charges]	%s を強化する:\n%d 最大チャージ
+%s gains [%d_radius:radius]	%s を強化する:\n%d 半径
 %s gains [%d_minion_damage:minion_damage]	%s を強化する:\n%d ミニオンダメージ
-%s gains %d Stun Duration	%s を強化する:\n%d スタン時間
+%s gains %d Stun Duration	%s を強化する:\n%d スタン持続
 %s gains [%d_num_targets:num_targets]	%s を強化する:\n%d ターゲット数
 %s gains %d Max Channel	%s を強化する:\n%d 最大チャネル
 %s gains [%d_cascade_range:cascade_range]	%s を強化する:\n%d カスケード範囲
@@ -450,6 +493,10 @@ Learn %s for %d SP?	%sを%d SPで覚え直す？
 %s gains [%d_minion_range:minion_range]	%s を強化する:\n%d ミニオン範囲
 %s gains [%d_minion_duration:minion_duration]	%s を強化する:\n%d ミニオン持続
 %s gains [%d_minion_health:minion_health]	%s を強化する:\n%d ミニオン体力
+%s gains [%d_duration:duration]	%s を強化する:\n%d 持続時間
+%s gains -%d Requires Los	%s を強化する:\n-%d 視界強化
+%s gains %d Storm Power	%s を強化する:\n %d 稲妻の力
+%s gains %d Petrify Duration	%s を強化する:\n %d 石化持続
 
 %s can be upgraded with only %d %s upgrade	\n%s は%dつの %s アップグレードが可能
 bolt	ボルト
@@ -476,6 +523,11 @@ Minion Duration	ミニオン持続
 %d - Minion Health	%d - ミニオン体力
 Minion Health	ミニオン体力
 %d minion health	%d ミニオン体力
+%d - Duration	%d - 持続
+Duration	持続
+%d duration	%d 持続
+%d - Extra Bolts	%d - 追加ボルト
+Extra Bolts	追加ボルト
 
 
 %d - Range	%d - 射程
@@ -536,10 +588,47 @@ Void Teleport	ヴォイド・テレポート
 Teleport deals arcane damage to all enemy units in line of sight of the targeted tile equal to its maximum number of charges.	テレポートは、対象タイルの視界内にあるすべての敵ユニットに対して、その最大チャージ数に等しい[秘術:arcane]ダメージを与える。
 
 
+%d - Blindcasting	%d - ブラインドキャスティング
+Blindcasting	ブラインドキャスティング
+Thunderstrike can be cast without line of sight	Thunderstrikeは視界がなくてもキャスト可能。
+%d - Storm Power	%d - ストーム・パワー
+Storm Power	ストーム・パワー
+Radius and stun duration are doubled if the target is inside of a storm cloud.	ターゲットが嵐の雲の中にいる場合、範囲とスタンの持続時間は倍となる。
+%d - Heaven Strike	%d - ヘブン・ストライク
+Heaven Strike	ヘブン・ストライク
+Thunder Strike also deals holy damage	Thunder Strikeは聖なるダメージも与える。
 
 
+%d - Petrify Duration	%d - 石化持続
+Petrify Duration	石化持続
+%d - Glassify	%d - ガラス化
+Glassify	ガラス化
+Turn the target to glass instead of stone.  Glass targets have -%d physical resist.	対象を石ではなく[ガラス:glass]に変える。[ガラス:glass]の対象は物理抵抗が-%dとなる。
+
+Turn enemies to glass instead of stone, makeing them take double physical damage instead of one quarter.	敵を石ではなく[ガラス:glass]に変える、これにより敵は1/4ではなく2倍の[物理:physical]ダメージを受ける。
 
 
+%d - Leap Range	%d - 飛躍範囲
+%d - Pounce	%d - パウンス
+Pounce	パウンス
+Summoned wolves gain a leap attack	召喚されたウルフは飛躍攻撃を獲得する。
+%d - Blood Hound	%d - ブラッド・ハウンド
+Blood Hound	ブラッド・ハウンド
+Summon blood hounds instead of wolves.	ウルフの代わりにブラッド・ハウンドを召喚する。
+%d - Ice Hound	%d - アイス・ハウンド
+Ice Hound	アイス・ハウンド
+Summon ice hounds instead of wolves.	ウルフの代わりにアイス・ハウンドを召喚する。
+%d - Clay Hound	%d - クレイ・ハウンド
+Clay Hound	クレイ・ハウンド
+Summon clay hounds instead of wolves.	ウルフの代わりにクレイ・ハウンドを召喚する。
+%d - Wolf Pack	%d - ウルフ・パック
+Wolf Pack	ウルフ・パック
+Each cast of wolf consumes %d charges and summons %d wolves.	WOLFの各キャストは2チャージを消費し、4匹のウルフを召喚する。
+Gain +%d damage for %d turns with each attack	+各攻撃で%dダメージを得る(%dターン毎)
+%d - Thorns	%d - ソーンズ
+Thorns	ソーンズ
+%d - Regen Buff	%d - リジェンバフ
+Regen Buff	リジェンバフ
 
 
 ##ゲート
