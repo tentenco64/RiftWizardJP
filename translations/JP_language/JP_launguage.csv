@@ -21,6 +21,10 @@ Yes	はい
 No	いいえ
 (Defeat all enemies and destroy all gates to unlock)	全ての敵を倒し全てのゲートを破壊することでアンロックされる。
 
+Adjust options	オプションを開く
+Learn how to play	遊び方を学ぶ
+Learn new spells and abilities	新しい呪文やスキルを学ぶ
+
 Return to Game	ゲームに戻る
 Save and Exit	タイトルに戻る
 
@@ -157,6 +161,8 @@ Show Threat Zone:	脅威ゾーン表示:
 Prev tooltip:	前へ:
 Next tooltip:	次へ:
 Fast Forward:	早送り:
+Reset to Default	デフォルト設定に戻す
+Done	設定を終える
 
 
 ##アイテム説明
@@ -173,13 +179,13 @@ Each enemy unit has a %d% chance to go berserk and attack its friends for %d tur
 Golden Stopwatch	GOLDEN STOPWATCH
 Stun each enemy unit for %d turns	フロアの敵を%dターンの間スタンさせる。
 Death Dice	DEATH DICE
-Roll the dice to deal %d Dark damage to %d random enemies	サイコロを振って [%d_闇ダメージ:dark] を ランダムな敵%d体に与える。
+Roll the dice to deal %d Dark damage to %d random enemies	サイコロを振って[%d_闇ダメージ:dark]を ランダムな敵%d体に与える。
 Energy Shield	ENERGY SHIELD
-Gain immunity to [%a], [%a], [%a], and [%a] damage for %d turns	%dターンの間 [%a] [%a] [%a] [%a] ダメージに対する免疫を得る。
+Gain immunity to [%a], [%a], [%a], and [%a] damage for %d turns	%dターンの間[%a] [%a] [%a] [%a]ダメージに対する免疫を得る。
 Stone Shield	STONE SHIELD
-Gain immunity to [%a], [%a], and [%a] damage for %d turns	%dターンの間 [%a] [%a] [%a] ダメージに対する免疫を得る。
+Gain immunity to [%a], [%a], and [%a] damage for %d turns	%dターンの間[%a] [%a] [%a]ダメージに対する免疫を得る。
 Earthquake Orb	EARTHQUAKE ORB
-Deals %d physical damage and destroys walls on %d% of all level tiles.	[%d_物理ダメージ:physical] をフロアのタイルの%d%に与え、壁を破壊する。
+Deals %d physical damage and destroys walls on %d% of all level tiles.	[%d_物理ダメージ:physical]をフロアのタイルの%d%に与え、壁を破壊する。
 Dragon Horn	DRAGON HORN
 Summon friendly dragons in each unoccupied adjacent square	隣接する未使用の各スクエアに味方ドラゴンを召喚する。
 Portal Disruptor	PORTAL DISRUPTOR
@@ -364,8 +370,8 @@ Cannon Blast	キャノン砲発射
  %d Physical or Fire damage	%d 物理または炎ダメージ
 Must be at full HP to fire.	HPがMAXの時、発射する。
 Loses half max HP on firing.	発射時に最大HPの半分を失う。
-On death, deals %d Fire damage to all tiles in a radius of %d	死亡時、 [%d_炎ダメージ:fire] を%dの範囲に与える。
-On death, deals %d Physical damage to all tiles in a radius of %d	死亡時、 [%d_物理ダメージ:physical] を%dの範囲に与える。
+On death, deals %d Fire damage to all tiles in a radius of %d	死亡時、[%d_炎ダメージ:fire]を%dの範囲に与える。
+On death, deals %d Physical damage to all tiles in a radius of %d	死亡時、[%d_物理ダメージ:physical]を%dの範囲に与える。
 
 
 ##呪文習得画面
@@ -377,13 +383,17 @@ Learn a new skill	スキルを学ぶ
 
 Learn %s for %d SP?	%sを%d SPで覚え直す？
 
-%s gains [%d_damage:damage]	%s を強化する: [%d_ダメージ:damage]
-%s gains [%d_range:range]	%s を強化する: [%d_射程:damage]
-%s gains [%d_max_charges:max_charges]	%s を強化する: [%d_max_charges:max_charges]
+%s gains [%d_damage:damage]	%s を強化する:[%d_ダメージ:damage]
+%s gains [%d_range:range]	%s を強化する:[%d_射程:damage]
+%s gains [%d_max_charges:max_charges]	%s を強化する:[%d_max_charges:max_charges]
+%s gains [%d_radius:radius]	%s を強化する:[%d_半径:radius]
+%s gains [%d_minion_damage:minion_damage]	%s を強化する:[%d_minion_damage:minion_damage]
 
-
-%s can be upgraded with only %d %s upgrade	%s は%dつの %s アップグレードが可能
+%s can be upgraded with only %d %s upgrade	\n%s は%dつの %s アップグレードが可能
 bolt	ボルト
+damage	ダメージ
+type	タイプ
+minion	ミニオン
 
 Upgrades Available	つのアップグレードが可能
 %d - Damage	%d - ダメージ
@@ -398,9 +408,9 @@ Minion Damage	ミニオンダメージ
 %d - Range	%d - 射程
 Range	射程
 %d range	%d 射程
-%d - Radius	%d - 爆発範囲
-Radius	爆発半径
-%d radius	%d 爆発半径
+%d - Radius	%d - 半径
+Radius	半径
+%d radius	%d 半径
 %d - Num Targets	%d - ターゲット数
 Num Targets	ターゲット数
 %d num targets	%d ターゲット数
@@ -413,7 +423,7 @@ Chaos Ball	カオス・ボール
 Energy Ball	エナジー・ボール
 %d - Ash Ball	%d - アッシュ・ボール
 Ash Ball	アッシュ・ボール
-Fireball randomly deals [%a], [%a], or [%a] damage.  If a unit is resistant to one or more of these damage types, fireball deals the damage type that unit is least resistant to.	FIREBALL はランダムに [%a] [%a] [%a] のダメージを与える。敵がこれらのダメージタイプのうち1つ以上に耐性を持っている場合、FIREBALLはそのユニットが最も耐性を持っていないダメージタイプを与える。
+Fireball randomly deals [%a], [%a], or [%a] damage.  If a unit is resistant to one or more of these damage types, fireball deals the damage type that unit is least resistant to.	FIREBALL はランダムに[%a] [%a] [%a]のダメージを与える。敵がこれらのダメージタイプのうち1つ以上に耐性を持っている場合、FIREBALLはそのユニットが最も耐性を持っていないダメージタイプを与える。
 Fireball blinds for %d turn.	FIREBALLは%dターンの盲目を与える。
 Fireball can be upgraded with only %d damage type upgrade	FIREBALLのダメージタイプのアップグレードは%dつだけ可能。
 %d - Meteor Size	%d - 隕石の大きさ
@@ -424,26 +434,28 @@ Max Channel	最大チャネル
 %d max channel	%d 最大チャネル
 %d - Withering	%d - ウィザリング
 Withering	ウィザリング
+Non living units damaged by Death Bolt lose max hp equal to the damage dealt.	DEATH BOLT によってダメージを受けた非生物は、受けたダメージと同じだけ最大HPを失う。
 %d - Soul Battery	%d - ソウル・バッテリー
 Soul Battery	ソウル・バッテリー
+Deathbolt permenantly gains %d damage whenever it slays a living target.	DEATH BOLT は生物を倒す度に永久的に%dダメージを得る。
 %d - Channeling	%d - チャネリング
 Channeling	チャネリング
 Lightning bolt can be channeled for up to %d turns.	LIGHTNING BOLT は最大%dターンの間、チャネリング出来る。
 %d - Judgement Bolt	%d - ジャッジメント・ボルト
 Judgement Bolt	ジャッジメント・ボルト
-Lightning bolt also deals holy and dark damage	LIGHTNING BOLTは [破邪:holy] と [暗黒:dark] のダメージも与える。
+Lightning bolt also deals holy and dark damage	LIGHTNING BOLTは[破邪:holy]と[暗黒:dark]のダメージも与える。
 %d - Energy Bolt	%d - エナジー・ボルト
 Energy Bolt	エナジー・ボルト
-Lightning bolt also deals fire and arcane damage	LIGHTNING BOLTは [炎:fire] と [秘術:arcane] のダメージも与える。
+Lightning bolt also deals fire and arcane damage	LIGHTNING BOLTは[炎:fire]と[秘術:arcane]のダメージも与える。
 
 %d - Cascade	%d - カスケード
 Cascade	カスケード
 Hits from Annihilate will jump to nearby targets if the main target is killed	敵を倒した時、ANNIHILATEは近くの敵に連鎖する
 %d - Dark Annihilation	%d - ダーク・アナイアレイション
 Dark Annihilation	ダーク・アナイアレイション
-Annihilate deals an additional dark damage hit	ANNIHILATEは追加の[闇ダメージ:dark] を与える
+Annihilate deals an additional dark damage hit	ANNIHILATEは追加の[暗黒ダメージ:dark]を与える
 %d - Arcane Annihilation	%d - アルケン・アナイアレイション
-Annihilate deals an additional arcane damage hit	ANNIHILATEは追加の[秘術ダメージ:arcane] を与える
+Annihilate deals an additional arcane damage hit	ANNIHILATEは追加の[秘術ダメージ:arcane]を与える
 
 
 
@@ -455,29 +467,29 @@ Annihilate deals an additional arcane damage hit	ANNIHILATEは追加の[秘術�
 ## 呪文
 
 Fireball	FIREBALL
-Deals [%d:damage] [%a] damage to units in a [%d_tile:radius] burst.	[%d:damage] [%a] ダメージを%dタイルの範囲で与える。\n
+Deals [%d:damage] [%a] damage to units in a [%d_tile:radius] burst.	[%d:damage][%a]ダメージを%dタイルの範囲で与える。\n
 
 Flame Tongue	FLAME TONGUE
 Deal fire damage in a beam	炎属性のビームを発射する。\n
 
 Meteor Shower	METEOR SHOWER
-Rains [%d_meteors:num_targets] down on random tiles in a [%d_tile:radius] radius each turn.	毎ターン [%dつの隕石:num_targets] が [半径%d:radius] のランダムなタイルに降り注ぐ。
-Meteors deal [%d_physical:physical] damage, destroy walls, and inflict stun for [%d_turns:duration].	隕石は [%d_物理ダメージ:physical] を与え、壁を破壊し、 [%d_ターン:duration] の間、スタンを付与する。
-Meteors also deal [%d_fire:fire] damage in a [%d_tile:radius] radius.	また、隕石は [%d_炎ダメージ:fire] を [半径%d:radius] に与える。
-This spell can be channeled for up to [%d_turns:duration].  The effect is repeated each turn the spell is channeled.	この呪文は最大 [%d_ターン:duration] までチャネリングすることができる。この効果はチャネリングが行われるたびに繰り返される。\n\n
+Rains [%d_meteors:num_targets] down on random tiles in a [%d_tile:radius] radius each turn.	毎ターン[%dつの隕石:num_targets]が[半径%d:radius]のランダムなタイルに降り注ぐ。
+Meteors deal [%d_physical:physical] damage, destroy walls, and inflict stun for [%d_turns:duration].	隕石は[%d_物理ダメージ:physical]を与え、壁を破壊し、[%d_ターン:duration]の間、スタンを付与する。
+Meteors also deal [%d_fire:fire] damage in a [%d_tile:radius] radius.	また、隕石は[%d_炎ダメージ:fire]を[半径%d:radius]に与える。
+This spell can be channeled for up to [%d_turns:duration].  The effect is repeated each turn the spell is channeled.	この呪文は最大[%d_ターン:duration]までチャネリングすることができる。この効果はチャネリングが行われるたびに繰り返される。\n\n
 
 Lightning Bolt	LIGHTNING BOLT
-Deals [%d_lightning:lightning] damage in a beam.	[%d_稲妻ダメージ:lightning] のビームを発射する。\n
+Deals [%d_lightning:lightning] damage in a beam.	[%d_稲妻ダメージ:lightning]のビームを発射する。\n
 
 Annihilate	ANNIHILATE
-Deals [%d_fire:fire] damage, [%d_lightning:lightning] damage, and [%d_physical:physical] damage to the target.	敵に [%d_炎ダメージ:fire] [%d_稲妻ダメージ:lightning] [%d_物理ダメージ:physical] を与える。\n
+Deals [%d_fire:fire] damage, [%d_lightning:lightning] damage, and [%d_physical:physical] damage to the target.	敵に[%d_炎ダメージ:fire] [%d_稲妻ダメージ:lightning] [%d_物理ダメージ:physical]を与える。\n
 
 
 
 Death Bolt	DEATH BOLT
-Deals [%d_dark:dark] damage to one target.	ターゲット1人に [%d_暗黒ダメージ:dark] を与える。
+Deals [%d_dark:dark] damage to one target.	ターゲット1人に[%d_暗黒ダメージ:dark]を与える。
 Slain living units are raised as skeletons.	倒した敵はスケルトンとして蘇る。
-Raised skeletons have max HP equal to that of the slain unit, and deal [%d_physical:physical] damage in melee.	スケルトンは元々の敵と同じHPを持ち、近接で [%d_物理ダメージ:physical] を与える。
+Raised skeletons have max HP equal to that of the slain unit, and deal [%d_physical:physical] damage in melee.	スケルトンは元々の敵と同じHPを持ち、近接で[%d_物理ダメージ:physical]を与える。
 Skeletons of flying units can fly.	飛行する敵のスケルトンは 空を飛ぶことができる。\n
 
 
@@ -491,7 +503,7 @@ Next spawn: %d turns	次の出現は%dターン後
 Applies Poison for %d turns.  	%dターンの間毒を与える
 
 Heal for %d HP on cast	キャスト時にHPを%d回復させる
-Half of all [arcane] damage dealt by this spell is redealt as [holy] damage, and then again as [dark] damage.	この呪文によって与えられたすべての [arcane] ダメージの半分が[holy] ダメージとしてそして再び[dark] ダメージとして再加算される
+Half of all [arcane] damage dealt by this spell is redealt as [holy] damage, and then again as [dark] damage.	この呪文によって与えられたすべての[arcane]ダメージの半分が[holy]ダメージとしてそして再び[dark]ダメージとして再加算される
 On damaging an enemy in a thunderstorm or blizzard, redeal 75% of the damage as [lightning] and 75% of the damage as [ice].
 Summoned minions gain [50_physical:physical] resist and [50_holy:holy] resist.
 Summoned minions reincarnate once
@@ -536,7 +548,7 @@ Whenever this spell kills an enemy unit, deal [18_holy:holy] damage to the close
 For each 15 damage dealt by this spell or a minion it summons, deal [9_ice:ice] or [9_lightning:lightning] damage to a random enemy unit.
 
 
-For each %d damage dealt by this spell, deal [%d_arcane:arcane] or [%d_physical:physical] damage to all enemies.	この呪文によって与えられた %dダメージごとに全ての敵に [%d_秘術:arcane] または [%d_物理:physical] のダメージを与える。
+For each %d damage dealt by this spell, deal [%d_arcane:arcane] or [%d_physical:physical] damage to all enemies.	この呪文によって与えられた %dダメージごとに全ての敵に[%d_秘術:arcane]または[%d_物理:physical]のダメージを与える。
 
 
 Whenever you use an item, gain 1 charge of this spell.
@@ -562,10 +574,10 @@ Whenever you cast this spell, deal 27 [physical] damage to 1 enemy in line of si
 Whenever this spell kills a [lightning] or [fire] unit, summon a living scroll of fire or lightning at that unit's location.\nWhenever you cast the last charge of this spell, summon a Chaos Quill for 36 turns.
 
 
-Enhances [%a] spell with:	[%a] の魔法に以下の効果を追加する: 
-Enhances [%a] or [%a] spell with:	[%a] か [%a] の魔法に以下の効果を追加する: 
-Enhances [%a] or [%a] or [%a] spell with:	[%a] か [%a] か [%a] の魔法に以下の効果を追加する: 
-Enhances [%a] or [%a] or [%a] or [%a] spell with:	[%a] か [%a] か [%a] か[%a] の魔法に以下の効果を追加する: 
+Enhances [%a] spell with:	[%a]の魔法に以下の効果を追加する: 
+Enhances [%a] or [%a] spell with:	[%a]か[%a]の魔法に以下の効果を追加する: 
+Enhances [%a] or [%a] or [%a] spell with:	[%a]か[%a]か [%a]の魔法に以下の効果を追加する: 
+Enhances [%a] or [%a] or [%a] or [%a] spell with:	[%a]か[%a]か[%a]か[%a]の魔法に以下の効果を追加する: 
 
 Limit %d shrine per spell.	1つの呪文につき1つの祠のみ効果を発揮する\n
-Can be applied only to [sorcery] and [enchantment] spells.	[sorcery] か[enchantment] の呪文にのみ適用可能です
+Can be applied only to [sorcery] and [enchantment] spells.	[sorcery]か[enchantment]の呪文にのみ適用可能です

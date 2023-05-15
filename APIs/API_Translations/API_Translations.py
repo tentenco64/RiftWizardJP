@@ -102,13 +102,12 @@ word_p = re.compile(r"\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*")
 gate_p = re.compile(r"(?<=Spawns a )\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*(?= every)")
 learn_p = re.compile(r"(?<=Learn )\b[a-zA-Z]{2,}\b( \b[a-zA-Z]+\b)*(?= for)")
 attribute_p = re.compile(r"\[[a-zA-Z]+?\]")
-spell_gain_p = re.compile(r"^[\w ]+?(?= gains \[)")
+spell_gain_p = re.compile(r"^[a-zA-Z ]+?(?= gains \[)")
 
 can_be_upgrade_spellname_p = re.compile(r"^[\w ]+?(?= can be upgraded with only )")
 can_be_upgrade_type_p = re.compile(r"(?<=with only %d )[\w ]+?(?= upgrade$)")
 
 def translate(string):
-	print(string)
 	if translation is None:
 		return string
 	translated_string = ""
@@ -157,13 +156,16 @@ def translate(string):
 
 		if item_p.search(string) or spell_p.search(string): # インベントリ表示からアイテム名や呪文名を抽出
 			menu_flag = True
-			string = word_p.search(string).group()
+			m = word_p.search(string)
+			if m is not None:
+				string = m.group()
 
 		if damage_p.search(string) or resist_p.search(string): # モンスターの攻撃力表記や抵抗の表記から属性を抽出
 			damage_flag = True
-			string = word_p.search(string).group()
+			m = word_p.search(string)
+			if m is not None:
+				string = m.group()
 
-		print(string)
 		if string in translation: # 対応する翻訳がある場合の処理
 			if menu_flag: # インベントリ表示用の処理
 				name=translation[string]
@@ -186,7 +188,6 @@ def translate(string):
 			string = org_str
 
 		translated_string += string
-	print(translated_string)
 	return translated_string
 
 

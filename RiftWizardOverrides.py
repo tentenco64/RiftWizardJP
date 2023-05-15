@@ -111,21 +111,37 @@ def api_wrapped_string(self, string, surface, x, y, width, color=(255, 255, 255)
 	else:
 		char_width = self.font.size('w')[0]
 	chars_per_line = width // char_width
-	MENU_CHARS_MAX = 16
+	MENU_CHARS_MAX = 15
 	menu_width = char_width*MENU_CHARS_MAX
+
 	for line in lines:
 		exp = '[\[\]:|\w\|\'|%|-]+|.| |,'
 		words = re.findall(exp, line)
-		new_words=[]
-		# 文字数がオーバーした時に分割する
-		for word in words:
-			if self.font.size(word)[0] > menu_width:
-				splited_word = [word[x:x+MENU_CHARS_MAX] for x in range(0, len(word), MENU_CHARS_MAX)]
-				new_words.extend(splited_word)
-			else:
-				new_words.append(word)
-		words = new_words
 
+		pre_w = ""
+		new_word = ""
+		new_words=[]
+		word_width = 0
+		# 文字数がオーバーした時等に分割する
+		for word in words:
+			for w in word:
+				if w == "[" or pre_w == "]" or pre_w == "、" or pre_w == "。":
+					new_words.append(new_word)
+					word_width = 0
+					new_word = ""
+				elif (word_width + self.font.size(w)[0]) <= menu_width:
+					word_width += self.font.size(w)[0]
+				else:
+					new_words.append(new_word)
+					word_width = 0
+					new_word = ""
+				new_word += w
+				pre_w = w
+#			else:
+#				new_words.append(word)
+		new_words.append(new_word)
+		words = new_words
+		print(words)
 		words.reverse()
 		cur_line = "" 
 		chars_left = chars_per_line
