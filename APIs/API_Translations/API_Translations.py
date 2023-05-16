@@ -106,6 +106,7 @@ spell_gain_p = re.compile(r"^[a-zA-Z ]+?(?= gains \[?-?%d)")
 
 can_be_upgrade_spellname_p = re.compile(r"^[\w ]+?(?= can be upgraded with only )")
 can_be_upgrade_type_p = re.compile(r"(?<=with only %d )[\w ]+?(?= upgrade$)")
+en_str_list=[]
 
 def translate(string):
 	if translation is None:
@@ -164,7 +165,6 @@ def translate(string):
 			m = word_p.search(string)
 			if m is not None:
 				string = m.group()
-		print(string)
 		if string in translation: # 対応する翻訳がある場合の処理
 			if menu_flag: # インベントリ表示用の処理
 				name=translation[string]
@@ -183,8 +183,13 @@ def translate(string):
 				string = a_p.sub(attribute, string, 1)
 			for name in name_list:
 				string = s_p.sub(name, string, 1) # %sを元の表記に戻す
-		else: # 対応する翻訳が無い場合、元の状態に戻す
+		else: # 対応する翻訳が無い場合
+			if not string in en_str_list:
+				if re.search("[ぁ-んーァ-ヶ一-龠]", string) == None:
+					en_str_list.append(string)
+					print(string)
 			string = org_str
+			
 
 		translated_string += string
 	return translated_string

@@ -219,6 +219,12 @@ Creates %d friendly earth troll gates	%dつの友好的な earth troll gates を
 
 
 ##属性一覧
+Spells	呪文
+Skills	スキル
+Realm %d	REALM %d
+Level %d	LEVEL %d
+level %d	LEVEL %d
+Upgrades:	UPGRADES:
 
 Fire	Fire:炎
 Lightning	Lightning:稲妻
@@ -323,7 +329,7 @@ Shield	Shield:盾
 [%d_glass:glass]	[%d_ガラス:glass]
 [%d_tongue:tongue]	[%d_舌:tongue]
 [%d_slime:slime]	[%d_スライム:slime]
-[%d_shield:shield]	[%d_盾:shield]
+[%d_shield:shield]	[%d_シールド:shield]
 
 
 ##アイテム（保持不可）
@@ -385,6 +391,197 @@ Applies Poison for %d turns.  	%dターンの間毒を与える
 
 
 ## 呪文
+
+Icicle	ICICLE
+Deal [%d_physical:physical] damage to the target.	対象に[%d_物理:physical]ダメージを与える。
+Then, deal [%d_ice:ice] to the target and a [%d_tile:radius] area around it.	その後、対象とその周囲[%d_タイル:radius]範囲に[%d_氷:ice]ダメージを与える。\n
+%d - Freezing	%d - フリージング
+Freezing	フリージング
+Freeze the main target for %d turns	対象を%dターン凍結する
+%d - Icicle Harvest	%d - アイシクル・ハーヴェスト
+Icicle Harvest	アイシクル・ハーヴェスト
+Whenever a frozen enemy dies to [%a] damage, regain a charge of Icicle.	凍結した敵が[%a]ダメージで死んだ場合、Icicleのチャージを1つ回復する。
+
+Magic Missile	MAGIC MISSILE
+Deal [%d_arcane:arcane] damage to the target.	対象に[%d_秘術:arcane]ダメージを与える。\n
+%d - Shield Burn	%d - シールドバーン
+Shield Burn	シールドバーン
+Magic Missile removes up to %d SH from the target before dealing damage.	MAGIC MISSILEはダメージを与える前に対象から最大%d[シールド:shield]を取り除く。
+%d - Slaughter Bolt	%d - スローターボルト
+Slaughter Bolt	スローターボルト
+If Magic Missile targets a [%a] unit, it deals [%a], [%a], and [%a] damage instead of [%a].	MAGIC MISSILEが[%a]ユニットを対象とする場合、代わりに[%a]、[%a]、[%a]ダメージを与える。
+%d - Holy Bolt	%d - ホーリーボルト
+Holy Bolt	ホーリーボルト
+If Magic Missile targets an [%a] unit, it deals [%a] damage in addition to [%a] damage.	MAGIC MISSILEが[%a]ユニットを対象とする場合、[%a]ダメージに加えて[%a]ダメージを与える。
+%d - Disruption Bolt	%d - ディスラプションボルト
+Disruption Bolt	ディスラプションボルト
+If Magic Missile targets an [%a] unit, it deals [%a] and [%a] damage instead of [%a].	MAGIC MISSILEが[%a]ユニットを対象とする場合、代わりに[%a]と[%a]ダメージを与える。
+
+Poison Sting	POISON STING
+Deal [%d_physical:physical] damage to target unit.	対象のユニットに[%d_物理:physical]ダメージを与える。
+That unit is [%a] for [%d_turns:duration].	そのユニットは[%d_ターン:duration]間[%a]となる。
+[%a] units take %d [%a] damage each turn.	[%a]ユニットは毎ターン%d [%a]ダメージを受ける。\n
+%d - Acidity	%d - アシディティ
+Acidity	アシディティ
+Damaged targets lose all poison resist	ダメージを受けた対象はすべての毒抵抗を失う。
+
+Blazerip	BLAZERIP
+Deals [%d_arcane:arcane] and [%d_fire:fire] damage in a [%d_tile:radius] line perpendicular to the caster.	[%d_秘術:arcane]と[%d_炎:fire]ダメージを詠唱者に垂直な[%d_タイル:radius]に与える。
+Melts walls in the affected area.	影響範囲内の壁を溶かす。\n
+
+
+Boiling Blood	BOILING BLOOD
+All allied units gain stacking [%d_damage:damage] bonus to their fire and physical abilities.	すべての味方ユニットが火と物理の能力に対して積み重ね可能な[%d_damage:damage]ボーナスを得る。\n
+%d - Extra Damage	%d - 追加ダメージ
+Extra Damage	追加ダメージ
+%s gains %d Extra Damage	%sは%d追加ダメージを得る。
+%d - Holy Fury	%d - ホーリー・フューリー
+Holy Fury	ホーリー・フューリー
+Boiling Blood also impacts holy abilities	BOILING BLOODは[破邪:holy]の能力にも影響を及ぼす。
+%d - Dark Fury	%d - ダーク・フューリー
+Dark Fury	ダーク・フューリー
+Boiling Blood also impacts dark abilities	BOILING BLOODは[暗黒:dark]の能力にも影響を及ぼす。
+
+Chain Lightning	CHAIN LIGHTNING
+Fire an arcing bolt of electricity dealing [%d_lightning:lightning] damage.	電撃を放ち、[%d_稲妻:lightning]ダメージを与える。
+The bolt repeatably arcs to new targets within the cascade range.	ボルトはカスケード範囲内の新しいターゲットに繰り返しアークを形成する。
+Each arc deals damage to all units along a beam.	各アークはビームに沿った全ユニットにダメージを与える。
+The bolt can arc up to [%d_tiles:radius], and cannot pass through walls.	ボルトは[%d_タイル:radius]までアークを形成でき、壁を通過することはできない。
+The bolt terminates when it cannot arc to any new targets.	新しいターゲットにアークを形成できないとき、ボルトは終了する。\n
+%d - Cascade Range	%d - カスケード範囲
+Cascade Range	カスケード範囲
+%d - Cloud Conductance	%d - クラウド・コンダクタンス
+Cloud Conductance	クラウド・コンダクタンス
+Chain Lightning can arc to blizzards and storm clouds	チェーンライトニングはブリザードと嵐の雲にアークを形成できる。
+%d - Lightning Shield	%d - ライトニング・シールド
+Lightning Shield	ライトニング・シールド
+Chain Lightning can arc to friendly targets.	チェーンライトニングは友好的なターゲットにアークを形成できる。
+Friendly units hit by Chain Lightning gain %d SH, up to a max of %d, instead of damaged.	チェーンライトニングに当たった友好的なユニットはダメージを受ける代わりに%dの[シールド:shield]を得る、最大で%dまで。
+
+
+Freeze	FREEZE
+Magnetize	MAGNETIZE
+Melt	MELT
+Blink	BLINK
+Darkness	DARKNESS
+Dominate	DOMINATE
+Earthquake	EARTHQUAKE
+Ghostball	GHOSTBALL
+Iceball	ICEBALL
+Ironize	IRONIZE
+Mercurize	MERCURIZE
+Blizzard	BLIZZARD
+Conductance	CONDUCTANCE
+Permanence	PERMANENCE
+Purity	PURITY
+Multicast	MULTICAST
+
+Eye of Fire	EYE OF FIRE
+Eye of Ice	EYE OF ICE
+Eye of Lightning	EYE OF LIGHTNING
+Eye of Rage	EYE OF RAGE
+Fan of Flames	FAN OF FLAMES
+Healing Light	HEALING LIGHT
+Heavenly Blast	HEAVENLY BLAST
+Hollow Flesh	HOLLOW FLESH
+Hungry Maw	HUNGRY MAW
+Invoke Savagery	INVOKE SAVAGERY
+Regeneration Aura	REGENERATION AURA
+Soul Swap	SOUL SWAP
+Touch of Death	TOUCH OF DEATH
+Toxic Spores	TOXIC SPORES
+Toxin Burst	TOXIN BURST
+Aether Swap	AETHER SWAP
+Basilisk Armor	BASILISK ARMOR
+Blinding Light	BLINDING LIGHT
+Choir of Angels	CHOIR OF ANGELS
+Combust Poison	COMBUST POISON
+Death Chill	DEATH CHILL
+Devour Mind	DEVOUR MIND
+Earthen Sentinel	EARTHEN SENTINEL
+
+Flame Burst	FLAME BURST
+Frostfire Hydra	FROSTFIRE HYDRA
+Glass Orb	GLASS ORB
+Holy Armor	HOLY ARMOR
+Holy Fire	HOLY FIRE
+Lightning	Halo LIGHTNING HALO
+Lightning Spire	LIGHTNING SPIRE
+Mystic Power	MYSTIC POWER
+Mystic Vision	MYSTIC VISION
+Nightmare Aura	NIGHTMARE AURA
+Pain Mirror	PAIN MIRROR
+Plague of Filth	PLAGUE OF FILTH
+Prison of Thorns	PRISON OF THORNS
+Seal Fate	SEAL FATE
+Shrapnel Blast	SHRAPNEL BLAST
+Silver Spear	SILVER SPEAR
+Suspend Mortality	SUSPEND MORTALITY
+Underworld Passage	UNDERWORLD PASSAGE
+Void Orb	VOID ORB
+Arc Lightning	ARC LIGHTNING
+Bone Barrage	BONE BARRAGE
+Call Archon	CALL ARCHON
+Call Seraph	CALL SERAPH
+Chimera Familiar	CHIMERA FAMILIAR
+Conjure Memories	CONJURE MEMORIES
+Death Gaze	DEATH GAZE
+Death Shock	DEATH SHOCK
+Dispersion Field	DISPERSION FIELD
+Essence Flux	ESSENCE FLUX
+Fiery Tormentor	FIERY TORMENTOR
+Fire Drake	FIRE DRAKE
+Ice Drake	ICE DRAKE
+Ice Orb	ICE ORB
+Ice Vortex	ICE VORTEX
+
+Lightning Storm	LIGHTNING STORM
+Orb Control	ORB CONTROL
+Pyrostatic Pulse	PYROSTATIC PULSE
+Searing Seal	SEARING SEAL
+Siege Golems	SIEGE GOLEMS
+Siphon Shields	SIPHON SHIELDS
+Storm Burst	STORM BURST
+Storm Drake	STORM DRAKE
+The Restless Dead	THE RESTLESS DEAD
+Void Drake	VOID DRAKE
+Volcanic Eruption	VOLCANIC ERUPTION
+Wall of Ice	WALL OF ICE
+Watcher Form	WATCHER FORM
+Wheel of Death	WHEEL OF DEATH
+Ball Lightning	BALL LIGHTNING
+Blue Lion	BLUE LION
+Cantrip Cascade	CANTRIP CASCADE
+Chill Wind	CHILL WIND
+Death Cleave	DEATH CLEAVE
+Fae Court	FAE COURT
+Floating Eye	FLOATING EYE
+Flock of Eagles	FLOCK OF EAGLES
+Heavenly Idol	HEAVENLY IDOL
+Ice Phoenix	ICE PHOENIX
+Pillar of Fire	PILLAR OF FIRE
+Pyrostatic Curse	PYROSTATIC CURSE
+Ring of Spiders	RING OF SPIDERS
+Slime Form	SLIME FORM
+Soul Tax	SOUL TAX
+Spider Queen	SPIDER QUEEN
+Dragon Roar	DRAGON ROAR
+Gold Drake	GOLD DRAKE
+Heaven's Wrath	HEAVEN'S WRATH
+Imp Swarm	IMP SWARM
+Mystic Memory	MYSTIC MEMORY
+Searing Orb	SEARING ORB
+Twilight Gaze	TWILIGHT GAZE
+
+Knightly Oath	KNIGHTLY OATH
+Spikeball Factory	SPIKEBALL FACTORY
+Word of Beauty	WORD OF BEAUTY
+Word of Chaos	WORD OF CHAOS
+Word of Ice	WORD OF ICE
+Word of Madness	WORD OF MADNESS
+Word of Undeath	WORD OF UNDEATH
+
+
 
 Fireball	FIREBALL
 Deals [%d:damage] [%a] damage to units in a [%d_tile:radius] burst.	[%d:damage][%a]ダメージを%dタイルの範囲で与える。\n
@@ -536,6 +733,7 @@ Learn %s for %d SP?	%sを%d SPで学ぶ？
 %s gains %d Petrify Duration	%s を強化する:\n %d 石化持続
 %s gains %d Minion Attacks	%s を強化する:\n %d ミニオン攻撃回数
 %s gains %d Demon Units	%s を強化する:\n %d デーモン・ユニット
+%s gains %d Shield Burn	%s を強化する:\n %d シールドバーン
 
 %s can be upgraded with only %d %s upgrade	\n%s は%dつの %s アップグレードが可能
 bolt	ボルト
