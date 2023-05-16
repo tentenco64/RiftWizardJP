@@ -165,6 +165,7 @@ def translate(string):
 			m = word_p.search(string)
 			if m is not None:
 				string = m.group()
+
 		if string in translation: # 対応する翻訳がある場合の処理
 			if menu_flag: # インベントリ表示用の処理
 				name=translation[string]

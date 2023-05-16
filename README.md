@@ -3,6 +3,7 @@ Universal API MODを使ってRift Wizardを日本語化します。
 元となったUniversal APIとは互換性を保証しないので注意してください。
 
 **導入方法**
+
 Rift Wizardのインストール先\RiftWizard\mods\API_Universal\本MOD
 となるようにディレクトリに配置してください。
 API_Universalファイルが無い場合は作成してください。

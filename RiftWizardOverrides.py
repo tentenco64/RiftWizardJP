@@ -77,6 +77,8 @@ else:
 		string = API_Translations.translate(string)
 		translation_font = API_Translations.get_language_font(self)
 		font = font if translation_font == None else translation_font
+		# ラインサイズの再調整
+		RiftWizard.main_view.linesize = font.get_linesize()
 		__draw_string_old(self, string, surface, x, y, color=color, mouse_content=mouse_content, content_width=content_width, center=center, char_panel=char_panel, font=font)
 	RiftWizard.PyGameView.draw_string = draw_string
 
@@ -97,7 +99,6 @@ def draw_wrapped_string(self, string, surface, x, y, width, color=(255, 255, 255
 RiftWizard.PyGameView.draw_wrapped_string = draw_wrapped_string
 
 tooltip_colors = RiftWizard.tooltip_colors
-
 
 def api_wrapped_string(self, string, surface, x, y, width, color=(255, 255, 255), center=False, indent=False, extra_space=False):
 	lines = string.split('\n')
@@ -187,6 +188,19 @@ def api_wrapped_string(self, string, surface, x, y, width, color=(255, 255, 255)
 
 	return num_lines
 
+__draw_shop_old = RiftWizard.PyGameView.draw_shop
+def draw_shop(self):
+	translation_font = API_Translations.get_language_font(self)
+	font = self.font if translation_font == None else translation_font
+
+	old_font = self.font
+	self.font = font
+	retval = __draw_shop_old(self)
+	self.font = old_font
+
+	return retval
+
+RiftWizard.PyGameView.draw_shop = draw_shop
 
 
 __pygameview_init_old = RiftWizard.PyGameView.__init__

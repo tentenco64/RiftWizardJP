@@ -458,7 +458,40 @@ Lightning Shield	ライトニング・シールド
 Chain Lightning can arc to friendly targets.	チェーンライトニングは友好的なターゲットにアークを形成できる。
 Friendly units hit by Chain Lightning gain %d SH, up to a max of %d, instead of damaged.	チェーンライトニングに当たった友好的なユニットはダメージを受ける代わりに%dの[シールド:shield]を得る、最大で%dまで。
 
+Eye of Fire	EYE OF FIRE
+Every [%d_turns:shot_cooldown], deals [%d_fire:fire] damage to a random enemy unit in line of sight.	[%d_ターン:shot_cooldown]毎に、視界内のランダムな敵ユニットに[%d_炎:fire]ダメージを与える。
+%d - Shot Cooldown	%d - 発射間隔
+Shot Cooldown	発射間隔
+%s gains [-%d_shot_cooldown:shot_cooldown]	%sは[-%d_クールダウン:shot_cooldown]を得る。
 
+Eye of Ice	EYE OF ICE
+Every [%d_turns:shot_cooldown], deals [%d_ice:ice] damage to a random enemy unit in line of sight.	[%d_ターン:shot_cooldown]毎に、視界内のランダムな敵ユニットに[%d_冷気:ice]ダメージを与える。
+
+Eye of Lightning	EYE OF LIGHTNING
+Every [%d_turns:shot_cooldown], deals [%d_lightning:lightning] damage to a random enemy unit in line of sight.	[%d_ターン:shot_cooldown]毎に、視界内のランダムな敵ユニットに[%d_稲妻:lightning]ダメージを与える。
+
+Eye of Rage	EYE OF RAGE
+Every [%d_turns:shot_cooldown], inflict [%a] on a random enemy unit in line of sight for [%d_turns:berserk].	[%d_ターン:shot_cooldown]毎に、視界内のランダムな敵ユニットに[%a]を[%d_ターン:berserk]付与する。
+%d - Berserk Duration	%d - 狂暴化持続時間
+Berserk Duration	狂暴化持続時間
+%s gains %d Berserk Duration	%sは%d狂暴化持続時間を得る。
+%d - Lycanthropy	%d - 狼人症
+Lycanthropy	狼人症
+When Eye of Rage targets a [%a] unit with %d or less HP, that unit is instantly killed and raised as friendly Werewolf.  That Werewolf is berserked for %d turns.	狼人症は、激怒の目が%d HP以下の[%a]ユニットをターゲットにしたとき、そのユニットは即座に殺されて友好的なウェアウルフとして蘇生する。そのウェアウルフは%dターン狂暴化する。
+
+Fan of Flames	FAN OF FLAMES
+Deal [%d_fire:fire] damage to all units in a cone.	すべてのユニットに対して[%d_炎:fire]ダメージを扇形に与える。
+
+
+
+
+
+
+
+
+
+poisoned	毒
+Poisoned	毒
 Freeze	FREEZE
 Magnetize	MAGNETIZE
 Melt	MELT
@@ -476,11 +509,7 @@ Permanence	PERMANENCE
 Purity	PURITY
 Multicast	MULTICAST
 
-Eye of Fire	EYE OF FIRE
-Eye of Ice	EYE OF ICE
-Eye of Lightning	EYE OF LIGHTNING
-Eye of Rage	EYE OF RAGE
-Fan of Flames	FAN OF FLAMES
+
 Healing Light	HEALING LIGHT
 Heavenly Blast	HEAVENLY BLAST
 Hollow Flesh	HOLLOW FLESH
@@ -505,7 +534,7 @@ Frostfire Hydra	FROSTFIRE HYDRA
 Glass Orb	GLASS ORB
 Holy Armor	HOLY ARMOR
 Holy Fire	HOLY FIRE
-Lightning	Halo LIGHTNING HALO
+Lightning Halo	LIGHTNING HALO
 Lightning Spire	LIGHTNING SPIRE
 Mystic Power	MYSTIC POWER
 Mystic Vision	MYSTIC VISION
