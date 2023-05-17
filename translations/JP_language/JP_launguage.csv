@@ -246,7 +246,7 @@ Chaos	Chaos:混沌
 Undead	Undead:死霊
 Elemental	Elemental:元素
 
-Heal	Heal:治癒
+#Heal	Heal:治癒
 Acid	Acid:酸
 Demon	Demon:悪魔
 Spider	Spider:蜘蛛
@@ -257,7 +257,7 @@ Eye	Eye:目
 Glass	Glass:ガラス
 Tongue	Tongue:舌
 Slime	Slime:スライム
-Shield	Shield:盾
+#Shield	Shield:盾
 
 [physical]	[物理:physical]
 [fire]	[炎:fire]
@@ -482,19 +482,105 @@ When Eye of Rage targets a [%a] unit with %d or less HP, that unit is instantly 
 Fan of Flames	FAN OF FLAMES
 Deal [%d_fire:fire] damage to all units in a cone.	すべてのユニットに対して[%d_炎:fire]ダメージを扇形に与える。
 
+Freeze	FREEZE
+Target unit is [%a] for [%d_turns:duration].	ターゲットユニットは[%d_ターン:duration]の間[%a]となる。
+[%a] units cannot act. Frozen units unfreeze upon taking [%a] or [%a] damage.	[%a]ユニットは行動できない。[%a]または[%a]ダメージを受けると、凍結したユニットは解凍する。\n
+frozen	凍結
+Frozen	凍結
+
+Healing Light	HEALING LIGHT
+Heal all allies in line of sight for [%d_health:heal].	視界内のすべての味方を[%d_治癒:heal]で回復する。\n
+%d - Heal	%d - ヒール
+Heal	ヒール
+%d - Shielding Light	%d - シールディング・ライト
+Shielding Light	シールディング・ライト
+%s gains [%d_heal:heal]	%sは[%d_治癒:heal]を得る
+Allies in line of sight gain %d shield	視界内の味方は[%d_シールド:shield]を得る
+
+Heavenly Blast	HEAVENLY BLAST
+Deal [%d_holy:holy] damage to enemies and heal allies for [%d_hp:heal] along a beam and in a [%d_tile:radius] burst.	敵に[%d_破邪:holy]ダメージを与え、味方を[%d_hp:heal]で回復する。（ビームおよび[%d_タイル:radius]の範囲爆発に沿う）\n
+
+%d - Shield	%d - シールド
+Shield	シールド
+Affected ally units gain %d SH, to a maximum of %d.	影響を受けた味方ユニットは最大%d体まで[%d_シールド:shield]を得る。
+%d - Echo Heal	%d - エコーヒール
+Echo Heal	エコーヒール
+Affected ally units are re-healed for half the initial amount each turn for %d turns.	影響を受けた味方ユニットは、最初の量の半分を%dターン毎に再回復する。
+%d - Spirit Bind	%d - スピリット・バインド
+Spirit Bind	スピリット・バインド
+Slain enemies create temporary spirits.  Spirits are blinking holy undead with %d hitpoints and a %d damage ranged holy attack.	倒された敵は一時的な霊を生み出す。霊は[%d_HP:minion_health]と、%dダメージの[破邪:holy]攻撃を持つ点滅する死霊である。
+
+
+Hollow Flesh	HOLLOW FLESH
+Curse a group of units with the essence of undeath.	あるグループのユニットに死霊の本質の呪いをかける。
+Affected units become [%a] and lose [%a].	影響を受けたユニットは[%a]になり、[%a]を失う。
+Affected units lose [%d%:damage] of their max HP.	影響を受けたユニットは最大HPの[%d%:damage]を失う。
+Affected units lose [%d_holy:holy] resist.	影響を受けたユニットは[%d_破邪:holy]耐性を失う。
+Affected units gain [%d_dark:dark] resist.	影響を受けたユニットは[%d_暗黒:dark]耐性を得る。
+Affected units cannot be healed.	影響を受けたユニットは回復できない。\n
+
+%d - Max Health Loss	%d - 最大HP減少
+Max Health Loss	最大HP減少
+%s gains %d Max Health Loss	%sは%dの最大HP減少を得る
+%d - Fire Vulnerability	%d - 炎の脆弱性
+Fire Vulnerability	炎の脆弱性
+%s gains %d Fire Vulnerability	%sは%dの[炎:fire]の脆弱性を得る
+
+Hungry Maw	HUNGRY MAW
+Summons a hungry maw.	空腹な大口を召喚する。
+The maw has [%d_HP:minion_health], [%d_SH:shields], floats, and is stationary.	その大口は[%d_HP:minion_health]、[%d_SH:shields]を持ち、浮遊し、静止している。
+The maw has a [%d_physical:physical] damage attack, which pulls enemies towards it, with a range of [%d_tiles:minion_range].	大口は、敵を引き寄せる[%d_物理:physical]ダメージ攻撃を持ち、その範囲は[%d_タイル:minion_range]である。
+The maw vanishes after [%d_turns:minion_duration].	大口は[%d_ターン:minion_duration]後に消える。\n
+
+%d - Shields	%d - シールド
+Shields	シールド
 
 
 
 
+Invoke Savagery	INVOKE SAVAGERY
+Each living ally attacks a random enemy unit in melee range.	各生物の味方が近接範囲のランダムな敵ユニットを攻撃する。
+The attack deals [%d_physical:physical] damage and inflicts [%d_turns:duration] of [%a].	この攻撃は[%d_物理:physical]ダメージを与え、[%d_ターン:duration]の[スタン:stun]を引き起こす。
+
+Magnetize	MAGNETIZE
+Magnetize target metallic unit.	対象の金属ユニットを磁化する。
+Enemy units within a [%d_tile:radius] radius of the magnetized unit are pulled [%d_tiles:range] towards the unit each turn.	磁化されたユニットの[%d_タイル:radius]半径内の敵ユニットは、毎ターンユニットに向かって[%d_タイル:range]引き寄せられる。
+Afterwards, adjecent enemy units are stunned for %d turn.	その後、隣接する敵ユニットは%dターン間、スタンする。
 
 
+%d - Pull Distance	%d - 引き寄せ距離
+Pull Distance	引き寄せ距離
+%s gains %d Pull Strength	%sは%dの引き寄せ力を得る
+%d - Universal Magnetism	%d - 汎用磁力
+Universal Magnetism	汎用磁力
+Magnetize can target non [%a] units	磁化は[%a]でないユニットも対象にできる
+
+Melt	MELT
+Target unit takes [%d_fire:fire] damage and loses [%d_physical:physical] resist.	対象のユニットは[%d_炎:fire]ダメージを受け、[%d_物理:physical]の耐性を失う。
+%d - Ice Penetration	%d - 氷の貫通
+Ice Penetration	氷の貫通
+Melt also reduces [%a] resist by %d	Meltもまた、[%a]の耐性を%d減少させる
+
+Soul Swap	SOUL SWAP
+Each turn for [%d_turns:duration], all allied units in a [%d_tile:radius] radius are healed for [%d_HP:heal].	指定された[%d_ターン:duration]の各ターンに、[%d_タイル:radius]半径内のすべての味方ユニットのHPが[%d_HP:heal]回復する。
+%d - Global	%d - 全域
+Global	全域
+%s gains %d Whole Map	%sは全マップに対して%dを得る
+
+Soul Swap can target enemy undead units as well.	SOUL SWAPは敵の死霊ユニットも対象にできる。
+
+Regeneration Aura	REGENERATION AURA
+The aura heals all allies on the level	オーラはフロアのすべての味方を回復する。
+%d - Forced Transfer	%d - 強制転送
+Forced Transfer	強制転送
+Swap places with a friendly [%a] unit.	友好的な[%a]ユニットと位置を交換する。
 
 
 poisoned	毒
 Poisoned	毒
-Freeze	FREEZE
-Magnetize	MAGNETIZE
-Melt	MELT
+
+
+
 Blink	BLINK
 Darkness	DARKNESS
 Dominate	DOMINATE
@@ -510,13 +596,9 @@ Purity	PURITY
 Multicast	MULTICAST
 
 
-Healing Light	HEALING LIGHT
-Heavenly Blast	HEAVENLY BLAST
-Hollow Flesh	HOLLOW FLESH
-Hungry Maw	HUNGRY MAW
-Invoke Savagery	INVOKE SAVAGERY
-Regeneration Aura	REGENERATION AURA
-Soul Swap	SOUL SWAP
+
+
+
 Touch of Death	TOUCH OF DEATH
 Toxic Spores	TOXIC SPORES
 Toxin Burst	TOXIN BURST
@@ -763,6 +845,9 @@ Learn %s for %d SP?	%sを%d SPで学ぶ？
 %s gains %d Minion Attacks	%s を強化する:\n %d ミニオン攻撃回数
 %s gains %d Demon Units	%s を強化する:\n %d デーモン・ユニット
 %s gains %d Shield Burn	%s を強化する:\n %d シールドバーン
+%s gains [%d_shields:shields]	%sは[%d_シールド:shields]を獲得する
+
+
 
 %s can be upgraded with only %d %s upgrade	\n%s は%dつの %s アップグレードが可能
 bolt	ボルト
