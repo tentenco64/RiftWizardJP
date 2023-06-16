@@ -1,0 +1,54 @@
+原文;日本語訳
+Healing Potion;HEALING POTION
+Drinking this potion restores the drinker to full health.;HPが全回復する。
+Cannot be used while poisoned.;毒状態のときは使えない。
+Mana Potion;MANA POTION
+Refresh charges for all of your spells;全ての魔法を満タンまでチャージする。
+Teleporter;TELEPORTER
+Teleport anywhere on the map.;すきな場所へテレポートする。
+Chaos Bell;CHAOS BELL
+Each enemy unit has a %d% chance to go berserk and attack its friends for %d turns;フロアの敵が%d％の確率で凶暴化し %dターンの間仲間を攻撃する。
+Golden Stopwatch;GOLDEN STOPWATCH
+Stun each enemy unit for %d turns;フロアの敵を%dターンの間スタンさせる。
+Death Dice;DEATH DICE
+Roll the dice to deal %d Dark damage to %d random enemies;サイコロを振って[%d_闇ダメージ:dark]を ランダムな敵%d体に与える。
+Energy Shield;ENERGY SHIELD
+Gain immunity to [%a], [%a], [%a], and [%a] damage for %d turns;%dターンの間[%a] [%a] [%a] [%a]ダメージに対する免疫を得る。
+Stone Shield;STONE SHIELD
+Gain immunity to [%a], [%a], and [%a] damage for %d turns;%dターンの間[%a] [%a] [%a]ダメージに対する免疫を得る。
+Earthquake Orb;EARTHQUAKE ORB
+Deals %d physical damage and destroys walls on %d% of all level tiles.;[%d_物理ダメージ:physical]をフロアのタイルの%d%に与え、壁を破壊する。
+Dragon Horn;DRAGON HORN
+Summon friendly dragons in each unoccupied adjacent square;隣接する未使用の各スクエアに味方ドラゴンを召喚する。
+Portal Disruptor;PORTAL DISRUPTOR
+Change the destination of all portals in the current level;現在のフロアにある全ポータルの行き先を変更する。
+Shrine Disruptor;SHRINE DISRUPTOR
+Remake all of the shrines in the current level.;現在のフロアにある全ての祠を作り直す。
+Portal Key;PORTAL KEY
+Create a new unlocked rift at a random location in the current level;フロアのランダムな場所に新しく解錠されたリフトを作る。
+Orb of Corruption;ORB OF CORRUPTION
+An evil and dangerous artifact capable of corrupting creation.  A wise Wizard would surely only use it in the most dire of circumstances.;創造物を腐敗させることができる邪悪で危険なアーティファクト。賢明なウィザードならきっと最も悲惨な状況下でしか使わないだろう。
+Elixir of Youth;ELIXIR OF YOUTH
+For %d turns, all spell charges spent are instantly refunded;%dターンの間、消費した全てのスペルチャージが即座に回復する。
+Aether Dagger;AETHER DAGGER
+Enemy units in line of sight of the user lose all resistances and immunities;視界に入る敵がすべての抵抗と免疫を失う。
+Oculus;OCULUS
+For %d turns, your spells gain %d range and do not require line of sight;%dターンの間自分の魔法は射程距離が%d伸び視線を必要としない。
+Memory Enhancement;MEMORY ENHANCEMENT
+The effect of memory orbs is doubled;メモリーオーブの効果が倍になる。
+Draught of Memories;DRAUGHT OF MEMORIES
+For %d turns, gain double the effect of each memory orb you pick up;%dターンの間拾ったメモリーオーブの効果を倍にする。
+Bag of Spikes;BAG OF SPIKES
+Summon %d friendly rolling spikeballs;%d体の友好的な rolling spikeballs を召喚する。
+Bag of Bags;BAG OF BAGS
+Summon %d friendly bags of bugs;%d体の友好的な bags of bugs を召喚する。
+Troll Crown;TROLL CROWN
+Creates %d friendly troll gates;%dつの友好的な troll gates を作成する。
+Storm Troll Crown;STORM TROLL CROWN
+Creates %d friendly storm troll gates;%dつの友好的な storm troll gates を作成する。
+Earth Troll Crown;EARTH TROLL CROWN
+Creates %d friendly earth troll gates;%dつの友好的な earth troll gates を作成する。
+Memory Orb;MEMORY ORB
+Grants %d SP;%d SPを獲得する
+Ruby Heart;RUBY HEART
+Increase max hp by %d;最大HPを%d増加させる

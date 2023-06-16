@@ -1,11 +1,15 @@
 
 
 import mods.API_Universal.APIs.API_OptionsMenu.API_OptionsMenu as API_OptionsMenu
+import numpy as np
+import glob
 import os
 import pygame
 import re
+import mods.API_Universal.RiftWizardOverrides as RiftWizardOverrides
 
 NO_TRANSLATION = 'English (default)'
+
 
 translations = [NO_TRANSLATION]
 def initialize():
@@ -30,8 +34,29 @@ def translation_changed(self, cur_value):
 translation = None
 translation_font = None
 
-def load_translation(self):
 
+def pileCsv(trans_lang):
+	input_dir = os.path.join('mods','API_Universal','translations', trans_lang, 'components')
+	output_dir = os.path.join('mods','API_Universal','translations', trans_lang)
+
+	data = []
+
+	for filename in glob.glob(os.path.join(input_dir, '*.csv')):
+		# ファイルの内容を読み込む。最初の行はスキップ。
+		file_data = np.genfromtxt(filename, delimiter=';', dtype=None, encoding='utf-8', skip_header=1)
+		print(file_data)
+		data.append(file_data)
+
+	data = np.vstack(data)
+
+	# 結果を新しいCSVファイルに書き込む
+	output_file = os.path.join(output_dir, 'JP_language.csv')
+	np.savetxt(output_file, data, delimiter=';', fmt='%s', encoding='utf-8')
+
+
+def load_translation(self):
+	translate_lang = self.options['translation']
+	pileCsv(translate_lang)
 	global translation
 	global translation_font
 	translation = dict()
@@ -65,7 +90,7 @@ def load_translation(self):
 
 	with open(os.path.join('mods','API_Universal','translations', self.options['translation'], translation_filename), 'r', encoding='utf-8') as f:
 		for line in f:
-			split_line = line.split('\t')
+			split_line = line.split(';')
 			if len(split_line) <= 1:
 				# 警告をコメントアウト
 				# print('WARNING: translation file ' + translation_filename + ' - no tab character found on line: ' + line)
@@ -108,7 +133,7 @@ can_be_upgrade_spellname_p = re.compile(r"^[\w ]+?(?= can be upgraded with only 
 can_be_upgrade_type_p = re.compile(r"(?<=with only %d )[\w ]+?(?= upgrade$)")
 en_str_list=[]
 
-def translate(string):
+def translate(string, callby=""):
 	if translation is None:
 		return string
 	translated_string = ""
@@ -185,7 +210,7 @@ def translate(string):
 			for name in name_list:
 				string = s_p.sub(name, string, 1) # %sを元の表記に戻す
 		else: # 対応する翻訳が無い場合
-			if not string in en_str_list:
+			if not string in en_str_list and callby == "draw_wrapped_string":
 				if re.search("[ぁ-んーァ-ヶ一-龠]", string) == None:
 					en_str_list.append(string)
 					print(string)

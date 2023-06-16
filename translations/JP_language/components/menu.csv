@@ -1,0 +1,40 @@
+原文;日本語訳
+CONTINUE RUN;途中から続ける
+ABANDON RUN;冒険を破棄する
+NEW GAME;新しい冒険
+OPTIONS;オプション
+BESTIARY;モンスター情報
+DISCORD;Discord
+QUIT;ゲームをやめる
+ARCHMAGE;アークメイジ
+Back to Title;タイトルへ戻る
+NORMAL GAME;ノーマルゲーム
+ARCHMAGE TRIALS;アークメイジトライアル
+WEEKLY RUN;ウィークリーラン
+Music Volume:;BGM音量
+Menu (ESCAPE);メニュー(ESCAPE)
+How to Play (H);遊び方(H)
+Character Sheet (C);キャラクターシート(C)
+Really abandon the current run?;本当にこの冒険を破棄する？
+Yes;はい
+No;いいえ
+(Defeat all enemies and destroy all gates to unlock);全ての敵を倒し全てのゲートを破壊することでアンロックされる。
+Adjust options;オプションを開く
+Learn how to play;遊び方を学ぶ
+Learn new spells and abilities;新しい呪文やスキルを学ぶ
+Return to Game;ゲームに戻る
+Save and Exit;タイトルに戻る
+Base Game Settings:;ゲーム設定:
+  How to Play;  遊び方
+  Sound Volume:  %d;  サウンドボリューム:  %d
+  Sound Volume:   %d;  サウンドボリューム:   %d
+  Sound Volume:    %d;  サウンドボリューム:    %d
+  Music Volume:  %d;  ミュージックボリューム:  %d
+  Music Volume:   %d;  ミュージックボリューム:   %d
+  Music Volume:    %d;  ミュージックボリューム:    %d
+  Anim Speed: normal;  アニメーションスピード:  通常
+  Anim Speed:   fast;  アニメーションスピード:  高速
+  Anim Speed:  turbo;  アニメーションスピード: ターボ
+  Anim Speed: Xturbo;  アニメーションスピード:Xターボ
+  Rebind Controls;  キーコンフィグ
+  Language:;  言語:

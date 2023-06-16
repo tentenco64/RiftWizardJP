@@ -1,0 +1,7 @@
+原文;日本語訳
+Enhances [%a] spell with:;[%a]の魔法に以下の効果を追加する: 
+Enhances [%a] or [%a] spell with:;[%a]か[%a]の魔法に以下の効果を追加する: 
+Enhances [%a] or [%a] or [%a] spell with:;[%a]か[%a]か [%a]の魔法に以下の効果を追加する: 
+Enhances [%a] or [%a] or [%a] or [%a] spell with:;[%a]か[%a]か[%a]か[%a]の魔法に以下の効果を追加する: 
+Limit %d shrine per spell.;1つの呪文につき1つの祠のみ効果を発揮する\n
+Can be applied only to [sorcery] and [enchantment] spells.;[sorcery]か[enchantment]の呪文にのみ適用可能です

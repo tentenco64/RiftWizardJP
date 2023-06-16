@@ -1,0 +1,115 @@
+原文;日本語訳
+Fire;Fire:炎
+Lightning;Lightning:稲妻
+Ice;Ice:冷気
+Nature;Nature:自然
+Arcane;Arcane:秘術
+Dark;Dark:暗黒
+Holy;Holy:破邪
+Sorcery;Sorcery:魔術
+Conjuration;Conjuration:召喚
+Enchantment;Enchantment:付与
+Word;Word:言霊
+Orb;Orb:球
+Dragon;Dragon:龍
+Translocation;Translocation:転移
+Metallic;Metalic:金属
+Eye;Eye:瞳術
+Chaos;Chaos:混沌
+Undead;Undead:死霊
+Elemental;Elemental:元素
+#Heal;Heal:治癒
+Acid;Acid:酸
+Demon;Demon:悪魔
+Spider;Spider:蜘蛛
+Poison;Poison:毒
+Living;Living:生物
+Construct;Construct:建造物
+Eye;Eye:目
+Glass;Glass:ガラス
+Tongue;Tongue:舌
+Slime;Slime:スライム
+#Shield;Shield:盾
+[physical];[物理:physical]
+[fire];[炎:fire]
+[lightning];[稲妻:lightning]
+[ice];[冷気:ice]
+[nature];[自然:nature]
+[arcane];[秘術:arcane]
+[dark];[暗黒:dark]
+[holy];[破邪:holy]
+[sorcery];[魔術:sorcery]
+[conjuration];[召喚:conjuration]
+[enchantment];[付与:enchantment]
+[word];[言霊:word]
+[orb];[球:orb]
+[dragon];[龍:dragon]
+[translocation];[転移:translocation]
+[metallic];[金属:metallic]
+[eye];[瞳術:eye]
+[chaos];[混沌:chaos]
+[undead];[死霊:undead]
+[elemental];[元素:elemental]
+[heal];[治癒:heal]
+[acid];[酸:acid]
+[demon];[悪魔:demon]
+[spider];[蜘蛛:spider]
+[poison];[毒:poison]
+[living];[生物:living]
+[construct];[建造物:construct]
+[eye];[目:eye]
+[glass];[ガラス:glass]
+[tongue];[舌:tongue]
+[slime];[スライム:slime]
+[shield];[盾:shield]
+[petrify];[石化:petrify]
+[Petrified];[石化:petrify]
+[petrified];[石化:petrify]
+[stunned];[スタン:stunned]
+[Stunned];[スタン:stunned]
+[berserk];[狂乱:berserk]
+[Berserk];[狂乱:berserk]
+[Blind];[盲目:blind]
+[%d_physical:physical];[%d_物理:physical]
+[%d_fire:fire];[%d_炎:fire]
+[%d_lightning:lightning];[%d_稲妻:lightning]
+[%d_ice:ice];[%d_冷気:ice]
+[%d_nature:nature];[%d_自然:nature]
+[%d_arcane:arcane];[%d_秘術:arcane]
+[%d_dark:dark];[%d_暗黒:dark]
+[%d_holy:holy];[%d_破邪:holy]
+[%d_sorcery:sorcery];[%d_魔術:sorcery]
+[%d_conjuration:conjuration];[%d_召喚:conjuration]
+[%d_enchantment:enchantment];[%d_付与:enchantment]
+[%d_word:word];[%d_言霊:word]
+[%d_orb:orb];[%d_球:orb]
+[%d_dragon:dragon];[%d_龍:dragon]
+[%d_translocation:translocation];[%d_転移:translocation]
+[%d_metallic:metallic];[%d_金属:metallic]
+[%d_eye:eye];[%d_瞳術:eye]
+[%d_chaos:chaos];[%d_混沌:chaos]
+[%d_undead:undead];[%d_死霊:undead]
+[%d_elemental:elemental];[%d_元素:elemental]
+[%d_heal:heal];[%d_治癒:heal]
+[%d_acid:acid];[%d_酸:acid]
+[%d_demon:demon];[%d_悪魔:demon]
+[%d_spider:spider];[%d_蜘蛛:spider]
+[%d_poison:poison];[%d_毒:poison]
+[%d_living:living];[%d_生物:living]
+[%d_construct:construct];[%d_建造物:construct]
+[%d_eye:eye];[%d_目:eye]
+[%d_glass:glass];[%d_ガラス:glass]
+[%d_tongue:tongue];[%d_舌:tongue]
+[%d_slime:slime];[%d_スライム:slime]
+[%d_shield:shield];[%d_シールド:shield]
+Resist Physical;物理耐性
+Resist Poison;ポーション耐性
+Resist Fire;炎耐性
+Resist Ice;氷耐性
+Resist Lightning;雷耐性
+Resist Nature;自然耐性
+Resist Arcane;秘術耐性
+Resist Dark;暗黒耐性
+Resist Holy;破邪耐性
+Resist Poison;毒耐性
+Resist Acid;酸耐性

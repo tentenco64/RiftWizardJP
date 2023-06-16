@@ -1,0 +1,44 @@
+原文;日本語訳
+HOW TO PLAY;遊び方
+Finish 24 levels and kill Mordred to win the game.;24のレベルをクリアし、Mordredを倒せばゲームに勝利する。
+Destroy all enemies to finish a level.;すべての敵を撃破することでレベルクリアだ。
+After completing a level, walk onto a rift to peek inside.;レベルをクリアした後、裂け目の上を歩いて中を覗いてみよう。
+Teleport through the rift by clicking any empty tile, or abort the teleport using escape.  ;空いているタイルをクリックして裂け目からテレポートするか、エスケープでテレポートを中止する。
+After you teleport into a level, you cannot leave until it is finished.  Teleport with care.;テレポートで入ったレベルは、そのレベルが終了するまで出ることができない。 テレポートは慎重に行なおう。
+Spells and passive skills can all purchased with skillpoints (SP) from the Character Sheet.;呪文とパッシブスキルは、すべてキャラクターシートからスキルポイント（SP）を使って購入することができる。
+Spells can be individually upgraded from the Character sheet using SP, and at shrines found in the world.;呪文は、キャラクターシートからSPを使って個別にアップグレードすることができ、ワールド内にある祠でもアップグレードすることができる。
+Spells have limited charges.  Casting a spell costs one charge from that spell.;スペルのチャージには制限がある。 呪文を唱えると、その呪文のチャージを1つ消費する。
+Regain charges by drinking mana potions, which can be found on the ground in some levels.;マナポーションを飲むとチャージが回復する。マナポーションは一部の階層で地面に落ちている。
+CONTROLS:;Numpad:
+H: Help (This Screen)      C: Character Sheet      S: Learn Spells     K: Learn Skills;H：ヘルプ（この画面） C：キャラクターシート S：呪文の習得 K：スキルの習得
+Left click: Move, or cast currently selected spell at the cursor's position.;左クリック: 移動、または現在選択されている呪文をカーソルの位置に唱える。
+Right click: Cancel current spell or exit current menu;右クリック: 現在の呪文を取り消すか、現在のメニューを終了する。
+Numpad:;Numpad:
+7 8 9;7 8 9
+4   6  -> Move one space in the corresponding direction.;4   6  -> 対応する方向に1スペース移動します。
+1 2 3;1 2 3
+Numpad 5: Wait one turn (Or continue channeling if channeling a spell);テンキー5: 1ターン待つ（呪文をチャネリングしている場合は、チャネリングを継続する）
+        1 2 3 4 5 6 7 8 9 0: Cast/Select spell 1-10;        1 2 3 4 5 6 7 8 9 0: 呪文1～10を唱える／選択する
+Shift + 1 2 3 4 5 6 7 8 9 0: Cast/Select spell 11-20;Shift + 1 2 3 4 5 6 7 8 9 0: 呪文を唱える/選択する 11-20
+Alt   + 1 2 3 4 5 6 7 8 9 0: Use/Select item 1-10;Alt   + 1 2 3 4 5 6 7 8 9 0: 使用／項目1～10を選ぶ
+Numpad/mouse: move the targeting reticle.;テンキー/マウス: ターゲットレティクルを移動します。
+Esc: Cancel spell targeting;Esc: 呪文ターゲティングをキャンセルする。
+Enter: cast current spell or enter portal at current location;Enter: 現在の呪文を唱えたり、現在地のポータルに入ったりする。
+Advanced Controls:;Advanced Controls:
+l: Show line of sight           t: Show threatened tiles;l: 視線を表示する           t: 脅威のタイルを表示する
+Tab:  Next target               m:   Show message log;Tab:  次のターゲット               m:   メッセージログを表示
+v: look (target a square to look, tab target to look at interesting places);v: 見る（見るために四角をターゲットにする、面白い場所を見るためにタブターゲットをターゲットにする）
+w: walk (target a square to walk there, tab target to walk to interesting places);w: 歩く（広場をターゲットにしてそこを歩く、タブターゲットで面白い場所を歩く）
+a: autopickup all loot (after clearing level);a: 全ての戦利品を自動でピックアップ（レベルクリア後）
+Shift + up/down arrow on character sheet: change selected spell hotkey;Shift + 上下の矢印（キャラクターシート中）: 選択した呪文のホットキーを変更する
+i: interact with current tile (enter portal, open shop);i: 現在のタイルと対話する（ポータルに入る、ショップを開く）
+pgup/pgdown: view descriptions of spell upgrades (when viewing spell description);pgup/pgdown: スペルアップグレードの説明を見る（スペル説明閲覧中のみ）
+Stunned: Cannot act.;Stunned: 行動不能になる。
+Poisoned: Take 1 poison damage per turn and cannot heal.;Poisoned: 1ターンに1回、毒のダメージを受け、回復できない。
+Petrified: Cannot act, gain 100 ice and lightning resist, gain 75 physical and fire resist.;Petrified: 行動不能、冷気と稲妻の耐性が100、物理と炎の耐性が75になる。
+Glassified: Cannot act, gain 100 ice and lightning resist, 75 fire resist, lose 100 physical resist.;Glassified: 行動不能、冷気と稲妻耐性100、炎耐性75、物理耐性100を失う。
+Frozen: Cannot act.  Ends upon taking fire or physical damage.  Cannot affect units with 100 ice resist.;Frozen: 行動不能。 炎か物理ダメージを受けると終了する。 冷気耐性が100のユニットには影響しない。
+Berserked: Become hostile to all other units.  Will attack and be attacked by allies.;Berserked: 他の全てのユニットに対して敵対心を持つようになる。 味方を攻撃し、味方から攻撃されるようになる。
+Blind: All spell ranges reduced to 1.;Blind: 全てのスペルの射程が1になる。
+Channeling: Will continue to cast previous spell with same target if no other action is taken.;Channeling: 他のアクションを起こさなければ、同じターゲットに前のスペルをかけ続ける。
+Shield (SH): If a unit with SH would be dealt damage, it loses 1 SH instead.;Shield (SH): シールドを持つユニットがダメージを受ける場合、代わりに1SHを失う。

@@ -1,0 +1,33 @@
+原文;日本語訳
+up:;上移動:
+down:;下移動:
+left:;左移動:
+right:;右移動:
+up-right:;右上移動:
+up-left:;左上移動:
+down-right:;右下移動:
+down-left:;左下移動:
+pass/channel:;足踏み:
+confirm/cast:;呪文を撃つ:
+abort/cast:;呪文をキャンセルする:
+Spell %d:;呪文 %d:
+Spell Modifier Key:;呪文変更:
+Item Modifier Key:;アイテム変更:
+Next Target:;ターゲット変更:
+Show Line of Sight:;視界表示:
+Look:;見る:
+Walk:;歩く:
+Autopickup:;自動拾い:
+Character Sheet:;キャラクターシート表示:
+Spells:;呪文:
+Skills:;スキル:
+Items:;アイテム:
+Help:;ヘルプ表示
+Interact:;インタラクト:
+Message Log:;メッセージログ表示:
+Show Threat Zone:;脅威ゾーン表示:
+Prev tooltip:;前へ:
+Next tooltip:;次へ:
+Fast Forward:;早送り:
+Reset to Default;デフォルト設定に戻す
+Done;設定を終える

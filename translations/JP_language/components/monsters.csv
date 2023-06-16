@@ -1,0 +1,16 @@
+原文;日本語訳
+Operate Cannon;キャノン砲操作
+Activate's a Cannon;キャノン砲を作動させる。
+Repair Cannon;キャノン砲修理
+Repair %d damage to a Cannon;キャノン砲を%dダメージ分修理する。
+Wander;さまよう
+Walk towards a nearby Cannon;キャノン砲に向かって歩く。
+Construct Cannon;キャノン砲製造
+Begins construction of a Cannon.;キャノン砲製造を開始する。
+Cannon Blast;キャノン砲発射
+ %d Physical or Fire damage;%d 物理または炎ダメージ
+Must be at full HP to fire.;HPがMAXの時、発射する。
+Loses half max HP on firing.;発射時に最大HPの半分を失う。
+On death, deals %d Fire damage to all tiles in a radius of %d;死亡時、[%d_炎ダメージ:fire]を%dの範囲に与える。
+On death, deals %d Physical damage to all tiles in a radius of %d;死亡時、[%d_物理ダメージ:physical]を%dの範囲に与える。
+Applies Poison for %d turns.  ;%dターンの間毒を与える
